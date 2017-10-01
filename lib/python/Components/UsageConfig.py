@@ -5,7 +5,7 @@ from enigma import eDVBDB, eEPGCache, setTunerTypePriorityOrder, setPreferredTun
 from Components.About import about
 from Components.Harddisk import harddiskmanager
 from config import ConfigSubsection, ConfigYesNo, config, ConfigSelection, ConfigText, ConfigNumber, ConfigSet, ConfigLocations, NoSave, ConfigClock, ConfigInteger, ConfigBoolean, ConfigPassword, ConfigIP, ConfigSlider, ConfigSelectionNumber, ConfigFloat, ConfigDictionarySet, ConfigDirectory
-from Tools.Directories import resolveFilename, SCOPE_HDD, SCOPE_TIMESHIFT, SCOPE_AUTORECORD, SCOPE_SYSETC, defaultRecordingLocation, fileExists
+from Tools.Directories import resolveFilename, SCOPE_HDD, SCOPE_TIMESHIFT, SCOPE_VOD, SCOPE_AUTORECORD, SCOPE_SYSETC, defaultRecordingLocation, fileExists
 from Components.NimManager import nimmanager
 from Components.ServiceList import refreshServiceList
 from SystemInfo import SystemInfo
@@ -25,6 +25,7 @@ def InitUsageConfig():
 	config.workaround = ConfigSubsection()
 	config.workaround.blueswitch = ConfigSelection(default = "0", choices = [("0", _("QuickMenu/Extensions")), ("1", _("Extensions/QuickMenu"))])
 	config.workaround.deeprecord = ConfigYesNo(default = False)
+	config.workaround.wakeuptimeoffset = ConfigSelection(default = "standard", choices = [("-300", _("-5")), ("-240", _("-4")), ("-180", _("-3")), ("-120", _("-2")), ("-60", _("-1")), ("standard", _("Standard")), ("0", _("0")), ("60", _("1")), ("120", _("2")), ("180", _("3")), ("240", _("4")), ("300", _("5"))])
 	config.workaround.wakeuptime = ConfigSelectionNumber(default = 5, stepwidth = 1, min = 0, max = 30, wraparound = True)
 	config.workaround.wakeupwindow = ConfigSelectionNumber(default = 5, stepwidth = 5, min = 5, max = 60, wraparound = True)
 
@@ -74,16 +75,7 @@ def InitUsageConfig():
 		("keep reverseB", _("Keep service") + " + " + _("Reverse bouquet buttons"))])
 	config.usage.multiepg_ask_bouquet = ConfigYesNo(default = False)
 	config.usage.showpicon = ConfigYesNo(default = True)
-	
-#########  Workaround for VTI Skins   ##############
-	config.usage.picon_dir = ConfigDirectory(default = "/usr/share/enigma2/picon")
-	config.usage.movielist_show_picon = ConfigYesNo(default = False)
-	config.usage.use_extended_pig = ConfigYesNo(default = False)
-	config.usage.use_extended_pig_channelselection = ConfigYesNo(default = False)
-	config.usage.servicelist_preview_mode = ConfigYesNo(default = False)
-	config.usage.numberzap_show_picon = ConfigYesNo(default = False)
-	config.usage.numberzap_show_servicename = ConfigYesNo(default = False)
-#####################################################
+	config.usage.show_dvdplayer = ConfigYesNo(default = False)
 
 	config.usage.panicbutton = ConfigYesNo(default = False)
 	config.usage.panicchannel = ConfigInteger(default = 1, limits=(1,5000) )
@@ -118,9 +110,9 @@ def InitUsageConfig():
 	
 	config.usage.show_picon_bkgrn = ConfigSelection(default = "transparent", choices = [("none", _("Disabled")), ("transparent", _("Transparent")), ("blue", _("Blue")), ("red", _("Red")), ("black", _("Black")), ("white", _("White")), ("lightgrey", _("Light Grey")), ("grey", _("Grey"))])
 
+	config.usage.show_menupath = ConfigSelection(default = "small", choices = [("off", _("None")), ("small", _("Small")), ("large", _("Large"))])
 	config.usage.show_spinner = ConfigYesNo(default = True)
 	config.usage.enable_tt_caching = ConfigYesNo(default = True)
-
 	config.usage.tuxtxt_font_and_res = ConfigSelection(default = "TTF_SD", choices = [("X11_SD", _("Fixed X11 font (SD)")), ("TTF_SD", _("TrueType font (SD)")), ("TTF_HD", _("TrueType font (HD)")), ("TTF_FHD", _("TrueType font (full-HD)")), ("expert_mode", _("Expert mode"))])
 	config.usage.tuxtxt_UseTTF = ConfigSelection(default = "1", choices = [("0", "0"), ("1", "1")])
 	config.usage.tuxtxt_TTFBold = ConfigSelection(default = "1", choices = [("0", "0"), ("1", "1")])
@@ -149,7 +141,6 @@ def InitUsageConfig():
 	config.usage.tuxtxt_TTFWidthFactor16.addNotifier(patchTuxtxtConfFile, initial_call = False, immediate_feedback = False, call_on_save_or_cancel = True)
 	config.usage.tuxtxt_TTFHeightFactor16.addNotifier(patchTuxtxtConfFile, initial_call = False, immediate_feedback = False, call_on_save_or_cancel = True)
 	config.usage.tuxtxt_CleanAlgo.addNotifier(patchTuxtxtConfFile, initial_call = False, immediate_feedback = False, call_on_save_or_cancel = True)
-	
 	config.usage.sort_settings = ConfigYesNo(default = False)
 	config.usage.sort_menu_byname = ConfigYesNo(default = False)
 	config.usage.sort_plugins_byname = ConfigYesNo(default = True)
@@ -274,7 +265,7 @@ def InitUsageConfig():
 	config.usage.next_movie_msg = ConfigYesNo(default = True)
 	config.usage.last_movie_played = ConfigText()
 	config.usage.leave_movieplayer_onExit = ConfigSelection(default = "no", choices = [
-		("no", _("No")), ("popup", _("With popup")), ("without popup", _("Without popup")), ("stop", _("Behave like stop-button")) ])
+		("no", _("No")), ("popup", _("With popup")), ("without popup", _("Without popup")) ])
 
 	config.usage.setup_level = ConfigSelection(default = "expert", choices = [
 		("simple", _("Simple")),
@@ -318,7 +309,7 @@ def InitUsageConfig():
 		choicelist.append(("%d" % i, m))
 	config.usage.screen_saver = ConfigSelection(default = "0", choices = choicelist)
 
-	config.usage.check_timeshift = ConfigYesNo(default = True)
+	config.usage.check_timeshift = ConfigYesNo(default = False)
 
 	config.usage.alternatives_priority = ConfigSelection(default = "0", choices = [
 		("0", "DVB-S/-C/-T"),
@@ -359,28 +350,35 @@ def InitUsageConfig():
 	config.misc.disable_background_scan = ConfigYesNo(default = False)
 
 	config.usage.jobtaksextensions = ConfigYesNo(default = True)
-
 	config.usage.servicenum_fontsize = ConfigSelectionNumber(default = 0, stepwidth = 1, min = -8, max = 10, wraparound = True)
 	config.usage.servicename_fontsize = ConfigSelectionNumber(default = 0, stepwidth = 1, min = -8, max = 10, wraparound = True)
 	config.usage.serviceinfo_fontsize = ConfigSelectionNumber(default = 0, stepwidth = 1, min = -8, max = 10, wraparound = True)
 	config.usage.serviceitems_per_page = ConfigSelectionNumber(default = 18, stepwidth = 1, min = 8, max = 40, wraparound = True)
 	config.usage.show_servicelist = ConfigYesNo(default = True)
-	config.usage.servicelist_mode = ConfigSelection(default = "standard", choices = [
-		("standard", _("Standard")),
-		("simple", _("Simple")) ] )
-	config.usage.servicelistpreview_mode = ConfigYesNo(default = False)
-	config.usage.tvradiobutton_mode = ConfigSelection(default="BouquetList", choices = [
-					("ChannelList", _("Channel List")),
-					("BouquetList", _("Bouquet List")),
-					("MovieList", _("Movie List"))])
-	config.usage.channelbutton_mode = ConfigSelection(default="0", choices = [
-					("0", _("Just change channels")),
-					("1", _("Channel List")),
-					("2", _("Bouquet List")),
-					("3", _("Just change Bouquet"))])
-	config.usage.updownbutton_mode = ConfigSelection(default="1", choices = [
-					("0", _("Just change channels")),
-					("1", _("Channel List"))])
+        config.usage.servicelist_mode = ConfigSelection(default='standard', choices=[('standard', _('Standard')), ('simple', _('Simple'))])
+        config.usage.servicelistpreview_mode = ConfigYesNo(default=False)
+        config.usage.tvradiobutton_mode = ConfigSelection(default='BouquetList', choices=[('ChannelList', _('Channel List')), ('BouquetList', _('Bouquet List')), ('MovieList', _('Movie List'))])
+        config.usage.channelbutton_mode = ConfigSelection(default='0', choices=[('0', _('Just change channels')), ('1', _('Channel List')), ('2', _('Bouquet List'))])
+        config.usage.updownbutton_mode = ConfigSelection(default="1", choices = [
+                   ("standard", _("Standard")),
+                   ("simple", _("Simple")) ] )
+        config.usage.arrowupdownbutton_mode = ConfigSelection(default='1', choices=[('0', _('Open Service List for PiP')), ('1', _('Open Bouqet List'))])
+        config.usage.scroll_label_delay = ConfigSelection(default='3000', choices=[('1000', '1 ' + _('seconds')),
+         ('2000', '2 ' + _('seconds')),
+         ('3000', '3 ' + _('seconds')),
+         ('4000', '4 ' + _('seconds')),
+         ('5000', '5 ' + _('seconds')),
+         ('6000', '6 ' + _('seconds')),
+         ('7000', '7 ' + _('seconds')),
+         ('8000', '8 ' + _('seconds')),
+         ('9000', '9 ' + _('seconds')),
+         ('10000', '10 ' + _('seconds')),
+         ('noscrolling', _('off'))])
+        config.usage.scroll_label_speed = ConfigSelection(default='300', choices=[('500', _('slow')),
+         ('300', _('normal')),
+         ('200', _('medium')),
+         ('100', _('fast')),
+         ('50', _('very fast'))])
 	if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/CoolTVGuide/plugin.pyo"):
 		config.usage.okbutton_mode = ConfigSelection(default="0", choices = [
 						("0", _("InfoBar")),
@@ -394,6 +392,20 @@ def InitUsageConfig():
 		config.usage.okbutton_mode = ConfigSelection(default="0", choices = [
 						("0", _("InfoBar")),
 						("1", _("Channel List"))])
+	config.usage.volume_instead_of_channelselection = ConfigYesNo(default = False)
+	config.usage.zap_with_arrow_buttons = ConfigYesNo(default = False)
+	config.usage.infobar_frontend_source = ConfigSelection(default = 'tuner', choices = [
+        ('settings', _('Settings')),
+        ('tuner', _('Tuner'))])
+        config.usage.show_picon_bkgrn = ConfigSelection(default = 'transparent', choices = [
+        ('none', _('Disabled')),
+        ('transparent', _('Transparent')),
+        ('blue', _('Blue')),
+        ('red', _('Red')),
+        ('black', _('Black')),
+        ('white', _('White')),
+        ('lightgrey', _('Light Grey')),
+        ('grey', _('Grey'))])					
 	config.usage.show_bouquetalways = ConfigYesNo(default = False)
 	config.usage.show_event_progress_in_servicelist = ConfigSelection(default = 'barright', choices = [
 		('barleft', _("Progress bar left")),
@@ -482,9 +494,36 @@ def InitUsageConfig():
 	config.usage.frontend_priority.addNotifier(PreferredTunerChanged)
 	config.usage.frontend_priority_multiselect.addNotifier(PreferredTunerChanged)
 	config.usage.frontend_priority_strictly.addNotifier(PreferredTunerChanged)
-
+	if not os.path.exists(resolveFilename(SCOPE_VOD)):
+	 try:
+	  os.mkdir(resolveFilename(SCOPE_VOD), 493)
+	 except:
+	  pass
+	config.usage.vod_path = ConfigText(default = resolveFilename(SCOPE_VOD))
+	if not config.usage.default_path.value.endswith('/'):
+	  tmpvalue = config.usage.vod_path.value
+	  config.usage.vod_path.setValue(tmpvalue + '/')
+	  config.usage.vod_path.save()
+	def vodpathChanged(configElement):
+	 if not config.usage.vod_path.value.endswith('/'):
+	   tmpvalue = config.usage.vod_path.value
+	   config.usage.vod_path.setValue(tmpvalue + '/')
+	   config.usage.vod_path.save()
+	config.usage.vod_path.addNotifier(vodpathChanged, immediate_feedback = False)
+	config.usage.allowed_vod_paths = ConfigLocations(default = [
+	  resolveFilename(SCOPE_VOD)])
 	config.usage.hide_zap_errors = ConfigYesNo(default = True)
+	config.usage.enableVodMode = ConfigYesNo(default = True)
 	config.misc.use_ci_assignment = ConfigYesNo(default = True)
+	config.usage.messageNoResources = ConfigYesNo(default = True)
+	config.usage.messageTuneFailed = ConfigYesNo(default = True)
+	config.usage.messageNoPAT = ConfigYesNo(default = True)
+	config.usage.messageNoPATEntry = ConfigYesNo(default = True)
+	config.usage.messageNoPMT = ConfigYesNo(default = True)
+	config.usage.dsemudmessages = ConfigYesNo(default = True)
+	config.usage.messageYesPmt = ConfigYesNo(default = False)
+	config.usage.hide_zap_errors = ConfigYesNo(default = False)
+	
 	config.usage.hide_ci_messages = ConfigYesNo(default = False)
 	config.usage.show_cryptoinfo = ConfigSelection([("0", _("Off")),("1", _("One line")),("2", _("Two lines"))], "2")
 	config.usage.show_eit_nownext = ConfigYesNo(default = True)
