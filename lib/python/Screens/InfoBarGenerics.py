@@ -42,11 +42,11 @@ from Screens.UnhandledKey import UnhandledKey
 from ServiceReference import ServiceReference, isPlayableForCur
 from RecordTimer import RecordTimer, RecordTimerEntry, parseEvent, AFTEREVENT, findSafeRecordPath
 from Screens.TimerEntry import TimerEntry as TimerEntry
-from Tools.Directories import SCOPE_VOD
+
 from Tools import Directories, Notifications
 from Tools.Directories import pathExists, fileExists, getRecordingFilename, copyfile, moveFiles, resolveFilename, SCOPE_TIMESHIFT, SCOPE_CURRENT_SKIN
 from Tools.KeyBindings import getKeyDescription
-from enigma import eTimer, eServiceCenter, eDVBServicePMTHandler, iServiceInformation, iPlayableService, eServiceReference, eEPGCache, eActionMap, eDVBVolumecontrol, getDesktop, quitMainloop, eDVBDB
+from enigma import eTimer, eServiceCenter, eDVBServicePMTHandler, iServiceInformation, iPlayableService, eServiceReference, eEPGCache, eActionMap, eDVBVolumecontrol, getDesktop, quitMainloop
 from boxbranding import getBoxType, getMachineProcModel, getMachineBuild, getMachineBrand, getMachineName
 
 from time import time, localtime, strftime
@@ -2351,30 +2351,7 @@ class InfoBarSeek:
 		return seek
 
 	def isSeekable(self):
-		if config.usage.enableVodMode.value:
-			name = None
-			if self.session.nav.getCurrentlyPlayingServiceReference():
-				url = ServiceReference(self.session.nav.getCurrentlyPlayingServiceReference()).getPath()
-				name = self.session.nav.getCurrentlyPlayingServiceReference().toString().startswith('4097:')
-			ext = ['.3g2',
-			       '.3gp',
-			       '.asf',
-		   '.asx',
-	     '.avi',
-	     '.flv',
-	     '.m2ts',
-	     '.mkv',
-	     '.mov',
-	     '.mp4',
-	     '.mpg',
-	     '.mpeg',
-	     '.rm',
-	     '.swf',
-	     '.vob',
-	     '.wmv']
-			if self.getSeek() is None or isStandardInfoBar(self) and not self.timeshiftEnabled() and name == False and str(url).endswith(tuple(ext)):
-				return False
-		elif self.getSeek() is None or isStandardInfoBar(self) and not self.timeshiftEnabled():
+		if self.getSeek() is None or (isStandardInfoBar(self) and not self.timeshiftEnabled()):
 			return False
 		return True
 
@@ -2450,70 +2427,87 @@ class InfoBarSeek:
 
 	def setSeekState(self, state):
 		service = self.session.nav.getCurrentService()
+
 		if service is None:
 			return False
-		else:
-			if not self.isSeekable():
-				if state not in (self.SEEK_STATE_PLAY, self.SEEK_STATE_PAUSE):
-					state = self.SEEK_STATE_PLAY
-			pauseable = service.pause()
-			if pauseable is None:
-				state = self.SEEK_STATE_PLAY
-			self.seekstate = state
-			if pauseable is not None:
-				if self.seekstate[0] and self.seekstate[3] == '||':
-					self.activityTimer.stop()
-					pauseable.pause()
-				elif self.seekstate[0] and self.seekstate[3] == 'END':
-					self.activityTimer.stop()
-				elif self.seekstate[1]:
-					if not pauseable.setFastForward(self.seekstate[1]):
-						pass
-					else:
-						self.seekstate = self.SEEK_STATE_PLAY
-				elif self.seekstate[2]:
-					if not pauseable.setSlowMotion(self.seekstate[2]):
-						pass
-					else:
-						self.seekstate = self.SEEK_STATE_PAUSE
-				else:
-					self.activityTimer.start(int(config.seek.withjumps_repeat_ms.getValue()), False)
-					pauseable.unpause()
-			for c in self.onPlayStateChanged:
-				c(self.seekstate)
 
-			self.checkSkipShowHideLock()
-			if hasattr(self, 'ScreenSaverTimerStart'):
-				self.ScreenSaverTimerStart()
-			return True
+		if not self.isSeekable():
+			if state not in (self.SEEK_STATE_PLAY, self.SEEK_STATE_PAUSE):
+				state = self.SEEK_STATE_PLAY
+
+		pauseable = service.pause()
+
+		if pauseable is None:
+#			print "not pauseable."
+			state = self.SEEK_STATE_PLAY
+
+		self.seekstate = state
+
+		if pauseable is not None:
+			if self.seekstate[0] and self.seekstate[3] == '||':
+#				print "resolved to PAUSE"
+				self.activityTimer.stop()
+				pauseable.pause()
+			elif self.seekstate[0] and self.seekstate[3] == 'END':
+#				print "resolved to STOP"
+				self.activityTimer.stop()
+			elif self.seekstate[1]:
+				if not pauseable.setFastForward(self.seekstate[1]):
+					pass
+					# print "resolved to FAST FORWARD"
+				else:
+					self.seekstate = self.SEEK_STATE_PLAY
+					# print "FAST FORWARD not possible: resolved to PLAY"
+			elif self.seekstate[2]:
+				if not pauseable.setSlowMotion(self.seekstate[2]):
+					pass
+					# print "resolved to SLOW MOTION"
+				else:
+					self.seekstate = self.SEEK_STATE_PAUSE
+					# print "SLOW MOTION not possible: resolved to PAUSE"
+			else:
+#				print "resolved to PLAY"
+				self.activityTimer.start(int(config.seek.withjumps_repeat_ms.getValue()), False)
+				pauseable.unpause()
+
+		for c in self.onPlayStateChanged:
+			c(self.seekstate)
+
+		self.checkSkipShowHideLock()
+
+		if hasattr(self, "ScreenSaverTimerStart"):
+			self.ScreenSaverTimerStart()
+
+		return True
 
 	def okButton(self):
 		if self.seekstate == self.SEEK_STATE_PLAY:
 			return 0
-		if self.seekstate == self.SEEK_STATE_PAUSE:
+		elif self.seekstate == self.SEEK_STATE_PAUSE:
 			self.pauseService()
 		else:
 			self.unPauseService()
 
 	def playpauseService(self):
-		global seek_withjumps_muted
-		if self.seekAction != 0:
+		if self.seekAction <> 0:
 			self.seekAction = 0
 			self.doPause(False)
+			global seek_withjumps_muted
 			seek_withjumps_muted = False
 			return
 		if self.seekstate == self.SEEK_STATE_PLAY:
 			self.pauseService()
-		elif self.seekstate == self.SEEK_STATE_PAUSE:
-			if config.seek.on_pause.value == 'play':
-				self.unPauseService()
-			elif config.seek.on_pause.value == 'step':
-				self.doSeekRelative(1)
-			elif config.seek.on_pause.value == 'last':
-				self.setSeekState(self.lastseekstate)
-				self.lastseekstate = self.SEEK_STATE_PLAY
 		else:
-			self.unPauseService()
+			if self.seekstate == self.SEEK_STATE_PAUSE:
+				if config.seek.on_pause.value == "play":
+					self.unPauseService()
+				elif config.seek.on_pause.value == "step":
+					self.doSeekRelative(1)
+				elif config.seek.on_pause.value == "last":
+					self.setSeekState(self.lastseekstate)
+					self.lastseekstate = self.SEEK_STATE_PLAY
+			else:
+				self.unPauseService()
 
 	def pauseService(self):
 		if self.seekstate != self.SEEK_STATE_EOF:
@@ -2521,19 +2515,23 @@ class InfoBarSeek:
 		self.setSeekState(self.SEEK_STATE_PAUSE)
 
 	def pauseServiceYellow(self):
-		if self.seekstate != self.SEEK_STATE_EOF:
-			self.lastseekstate = self.seekstate
-			self.setSeekState(self.SEEK_STATE_PAUSE)
+		if config.plugins.esipanel_yellowkey.list.value == '0':
+			self.audioSelection()
+		elif config.plugins.esipanel_yellowkey.list.value == '2':
+			ToggleVideo()
 		else:
 			self.playpauseService()
 
 	def unPauseService(self):
 		if self.seekstate == self.SEEK_STATE_PLAY:
-			if self.seekAction != 0:
-				self.playpauseService()
+			if self.seekAction <> 0: self.playpauseService()
+			#return 0 # if 'return 0', plays timeshift again from the beginning
 			return
 		self.doPause(False)
 		self.setSeekState(self.SEEK_STATE_PLAY)
+		if config.usage.show_infobar_on_skip.value and not config.usage.show_infobar_locked_on_pause.value:
+			self.showAfterSeek()
+		self.skipToggleShow = True # skip 'break' action (toggleShow) after 'make' action (unPauseService)
 
 	def doPause(self, pause):
 		if pause:
@@ -2950,37 +2948,10 @@ class InfoBarTimeshiftState(InfoBarPVRState):
 		self.onHide.append(self.__hideTimeshiftState)
 
 	def _mayShow(self):
-		if config.usage.enableVodMode.value:
-			name = None
-			ext = ['.3g2',
-			       '.3gp',
-			       '.asf',
-		   '.asx',
-	     '.avi',
-	     '.flv',
-	     '.m2ts',
-	     '.mkv',
-	     '.mov',
-	     '.mp4',
-	     '.mpg',
-	     '.mpeg',
-	     '.rm',
-	     '.swf',
-	     '.vob',
-	     '.wmv']
-			if self.session.nav.getCurrentlyPlayingServiceReference():
-				name = self.session.nav.getCurrentlyPlayingServiceReference().toString().startswith('4097:')
-				url = ServiceReference(self.session.nav.getCurrentlyPlayingServiceReference()).getPath()
 		if self.shown and self.timeshiftEnabled() and self.isSeekable():
 			InfoBarTimeshift.ptsSeekPointerSetCurrentPos(self)
 			if config.timeshift.showinfobar.value:
-				self['TimeshiftSeekPointerActions'].setEnabled(True)
-			self.pvrStateDialog.show()
-		if config.usage.enableVodMode.value:
-			if name == True and self.isSeekable() and url.endswith(tuple(ext)):
-				InfoBarTimeshift.ptsSeekPointerSetCurrentPos(self)
-				if config.timeshift.showinfobar.value:
-					self['TimeshiftSeekPointerActions'].setEnabled(True)
+				self["TimeshiftSeekPointerActions"].setEnabled(True)
 			self.pvrStateDialog.show()
 		if not self.isSeekable():
 			self.startHideTimer()
@@ -2996,30 +2967,8 @@ class InfoBarTimeshiftState(InfoBarPVRState):
 			eventname = readmetafile.readline()[0:-1]
 			readmetafile.close()
 			self.pvrStateDialog["eventname"].setText(eventname)
-		elif config.usage.enableVodMode.value:
-			ext = ['.3g2',
-			       '.3gp',
-			       '.asf',
-		   '.asx',
-	     '.avi',
-	     '.flv',
-	     '.m2ts',
-	     '.mkv',
-	     '.mov',
-	     '.mp4',
-	     '.mpg',
-	     '.mpeg',
-	     '.rm',
-	     '.swf',
-	     '.vob',
-	     '.wmv']
-			if str(url).endswith(tuple(ext)):
-				self.pvrStateDialog['eventname'].setText(name)
-			else:
-				self.pvrStateDialog['eventname'].setText('')
 		else:
-			self.pvrStateDialog['eventname'].setText('')
-		return
+			self.pvrStateDialog["eventname"].setText("")
 
 class InfoBarShowMovies:
 	# i don't really like this class.
@@ -3893,33 +3842,10 @@ class InfoBarInstantRecord:
 
 		elif answer[1].startswith("pts_livebuffer") is True:
 			# print 'test2'
-				InfoBarTimeshift.SaveTimeshift(self, timeshiftfile=answer[1])
-			elif answer[1] == 'downloadvod':
-				self.saveTimeshiftEventPopupActive = False
-				name = ServiceReference(self.session.nav.getCurrentlyPlayingServiceReference()).getServiceName()
-				url = ServiceReference(self.session.nav.getCurrentlyPlayingServiceReference()).getPath()
-				if url:
-					import urllib2
-					from OPENDROID.OPD_panel import FileDownloadJob
-					from Screens.TaskView import JobView
-					try:
-						u = urllib2.urlopen(url)
-					except:
-						self.session.open(MessageBox, _('The URL to this image is not correct !!'), type=MessageBox.TYPE_ERROR)
+			InfoBarTimeshift.SaveTimeshift(self, timeshiftfile=answer[1])
 
-					file_name = config.usage.vod_path.value + '/' + name.replace(' ', '_') + '.mkv'
-					f = open(file_name, 'wb')
-					f.close()
-					job = FileDownloadJob(url, file_name, name.replace(' ', '_'))
-					job.afterEvent = 'close'
-					job_manager.AddJob(job)
-					job_manager.in_background = True
-					self.session.open(MessageBox, _('Downloading starded - VOD: ' + name.replace('_', ' ')), MessageBox.TYPE_INFO, timeout=5)
-				else:
-					self.session.open(MessageBox, _('Downloading filed, test another VOD title'), MessageBox.TYPE_INFO, timeout=5)
-			if answer[1] != 'savetimeshiftEvent':
-				self.saveTimeshiftEventPopupActive = False
-			return
+		if answer[1] != "savetimeshiftEvent":
+			self.saveTimeshiftEventPopupActive = False
 
 	def setEndtime(self, entry):
 		if entry is not None and entry >= 0:
@@ -3981,44 +3907,36 @@ class InfoBarInstantRecord:
 			return
 
 		if isStandardInfoBar(self):
-			commonVOD = ((_('Download (remember to switch to a channel DVB-S2/T/T2/C)'), 'downloadvod'), (_('Add recording (stop after current event)'), 'event'))
-			common = ((_('Add recording (stop after current event)'), 'event'),
-			          (_('Add recording (indefinitely)'), 'indefinitely'),
-			          (_('Add recording (enter recording duration)'), 'manualduration'),
-		      (_('Add recording (enter recording endtime)'), 'manualendtime'))
-			timeshiftcommon = ((_('Timeshift save recording (stop after current event)'), 'savetimeshift'), (_('Timeshift save recording (Select event)'), 'savetimeshiftEvent'))
+			common = ((_("Add recording (stop after current event)"), "event"),
+				(_("Add recording (indefinitely)"), "indefinitely"),
+				(_("Add recording (enter recording duration)"), "manualduration"),
+				(_("Add recording (enter recording endtime)"), "manualendtime"),)
+
+			timeshiftcommon = ((_("Timeshift save recording (stop after current event)"), "savetimeshift"),
+				(_("Timeshift save recording (Select event)"), "savetimeshiftEvent"),)
 		else:
 			common = ()
-			commonVOD = ()
 			timeshiftcommon = ()
+
 		if self.isInstantRecordRunning():
-			title = _('A recording is currently in progress.\nWhat do you want to do?')
-			list = common + ((_('Change recording (duration)'), 'changeduration'), (_('Change recording (add time)'), 'addrecordingtime'), (_('Change recording (end time)'), 'changeendtime'))
-			list += ((_('Stop recording'), 'stop'),)
-			if config.usage.movielist_trashcan.value:
-				list += ((_('Stop and delete recording'), 'stopdelete'),)
-			if len(self.recording) > 1:
-				list += ((_('Stop all current recordings'), 'stopall'),)
-				if config.usage.movielist_trashcan.value:
-					list += ((_('Stop and delete all current recordings'), 'stopdeleteall'),)
+			title =_("A recording is currently running.\nWhat do you want to do?")
+			list = ((_("Stop recording"), "stop"),) + common + \
+				((_("Change recording (duration)"), "changeduration"),
+				(_("Change recording (endtime)"), "changeendtime"),)
 			if self.isTimerRecordRunning():
-				list += ((_('Stop timer recording'), 'timer'),)
-		elif self.session.nav.getCurrentlyPlayingServiceReference():
-			name = self.session.nav.getCurrentlyPlayingServiceReference().toString().startswith('4097:')
-			if name == True:
-				title = _('Start recording?')
-				list = commonVOD
-			else:
-				title = _('Start recording?')
-				list = common
-			if self.isTimerRecordRunning():
-				list += ((_('Stop timer recording'), 'timer'),)
-			if isStandardInfoBar(self) and self.timeshiftEnabled():
-				list = list + timeshiftcommon
-			if isStandardInfoBar(self):
-				list = list + ((_('Do not record'), 'no'),)
+				list += ((_("Stop timer recording"), "timer"),)
 		else:
-			return 0
+			title=_("Start recording?")
+			list = common
+
+			if self.isTimerRecordRunning():
+				list += ((_("Stop timer recording"), "timer"),)
+		if isStandardInfoBar(self) and self.timeshiftEnabled():
+			list = list + timeshiftcommon
+
+		if isStandardInfoBar(self):
+			list = list + ((_("Do not record"), "no"),)
+
 		if list:
 			self.session.openWithCallback(self.recordQuestionCallback, ChoiceBox,title=title,list=list)
 		else:
