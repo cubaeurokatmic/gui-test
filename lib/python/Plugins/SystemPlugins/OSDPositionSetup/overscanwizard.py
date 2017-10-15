@@ -82,7 +82,7 @@ class OverscanWizard(Screen, ConfigListScreen):
 				"If you see the tips of all eight arrowheads, then your TV has overscan disabled.\n\n"
 				"Test Pattern by TigerDave - www.tigerdave.com/ht_menu.htm"))
 			self.yes_no = ConfigYesNo(default = True)
-			self.list.append(getConfigListEntry(_("Do you see all the eight arrowheads?"), self.yes_no))
+			self.list.append(getConfigListEntry(_("Did you see all the eight arrowheads?"), self.yes_no))
 			self.save_new_position = False
 			setPosition(0, 720, 0, 576)
 		elif self.step == 2:
@@ -120,14 +120,14 @@ class OverscanWizard(Screen, ConfigListScreen):
 				"When you select a different skin, the user interface of your receiver will restart.\n\n"
 				"Note: you can always start the Overscan Wizard later,  via\n\nMenu->Setup->System->A/V settings->Video Settings->OSD settings->Position & Size"))
 			self.yes_no.value = False
-			self.list.append(getConfigListEntry(_("Do you want to select a different skin?"), self.yes_no))
+			self.list.append(getConfigListEntry(_("Did you want to select a different skin?"), self.yes_no))
 		elif self.step == 5:
 			self.Timer.stop()
 			self["title"].setText(_("Overscan Wizard"))
 			self["introduction"].setText(_("The overscan wizard has been completed.\n\n"
 				"Note: you can always start the Overscan Wizard later,  via\n\nMenu->Setup->System->A/V settings->Video Settings->OSD settings->Position & Size"))
 			self.yes_no.value = True
-			self.list.append(getConfigListEntry(_("Do you want to quit the overscan wizard?"), self.yes_no))
+			self.list.append(getConfigListEntry(_("Did you want to quit the overscan wizard?"), self.yes_no))
 		elif self.step == 6:
 			config.skin.primary_skin.value == "SimpleLD/skin.xml" or config.skin.primary_skin.value == "MetrixHD/skin.xml"
 			config.save()
