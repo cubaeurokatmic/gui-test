@@ -2,22 +2,122 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenEsi v2.0 Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 15:33+0200\n"
-"PO-Revision-Date: 2015-10-28 08:56+0000\n"
+"POT-Creation-Date: 2017-10-15 19:02+0200\n"
+"PO-Revision-Date: 2017-10-21 16:59+0200\n"
 "Last-Translator: OpenEsi-Image <openesi@openesi.eu>\n"
-"eurosat/language/et_EE/)\n"
 "Language: et_EE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-KeywordsList: item;text;text=\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language-Team: \n"
 "X-Poedit-SearchPath-0: /Users/eleonor/Documents/Sorgenti/enigma2\n"
 "X-Poedit-SearchPath-1: /Users/eleonor/Documents/Sorgenti/multiboot-plugin\n"
 "X-Poedit-SearchPath-2: /Users/eleonor/Documents/Sorgenti/PoEditXml\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "Do you want to quit the overscan wizard?"
+msgstr "Kas soovite overscan võlurist loobuda?"
+
+msgid ""
+"It seems you did not see all the eight arrow heads. This means your TV is "
+"has overscan enabled, and is not configured properly.\n"
+"\n"
+"Please refer to your TVs manual to find how you can disable overscan on your "
+"TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, "
+"ask other users at http://openesi.eu.\n"
+"\n"
+msgstr ""
+"Tundub, et te ei näinud kõiki kaheksa noolepea. See tähendab, et teie "
+"teleris on lubatud ülekanne ja see pole korralikult konfigureeritud.\n"
+"\n"
+"Palun vaadake oma telerite juhendit, et leida, kuidas saate oma telerist "
+"väljalülitamist keelata. Otsige selliseid termineid nagu \"Just fit\", "
+"\"Full width\" jne. Kui te ei leia seda, küsige teistelt kasutajatelt "
+"aadressilt http://openesi.eu.\n"
+
+msgid "Overscan wizard"
+msgstr "Overscan nõustaja"
+
+msgid "Did you see all eight arrow heads?"
+msgstr "Kas sa nägid kõiki kaheksa noolepea?"
+
+msgid ""
+"The overscan wizard has been completed.\n"
+"\n"
+"Note: you can always start the Overscan wizard later,  via\n"
+"\n"
+"menu->Configuration->Video-Audio-Osd-Display->Display and OSD"
+msgstr ""
+"Ülemineku nõustaja on lõpetatud.\n"
+"\n"
+"Märkus: saate alati Overscan-viisardi käivitada hiljem\n"
+"\n"
+"menüü-> Konfiguratsioon-> Video-Audio-Osd-Displei-> Ekraan ja OSD"
+
+msgid ""
+"The overscan wizard helps you to setup your TV in the correct way.\n"
+"\n"
+"For the majority of TV's, the factory default is to have overscan enabled. "
+"This means you are always watching a \"zoomed in\" picture instead of real "
+"HD, and parts of the user inferface (skin) may be invisible.\n"
+"\n"
+"The yellow area means a 5% border area of a full HD picture will be "
+"invisible.\n"
+"The green area means a 10% border area of a full HD picture will be "
+"invisible.\n"
+"\n"
+"In other words, if the yellow box meets all for sides of your screen, then "
+"you have at least 5% overscan on all sides.\n"
+"\n"
+"If you see the tips of all eight arrowheads, then your TV has overscan "
+"disabled.\n"
+"\n"
+"Test Pattern by TigerDave - www.tigerdave.com/ht_menu.htm"
+msgstr ""
+"Overscan-viisard aitab teil oma telerit õigesti seadistada.\n"
+"\n"
+"Enamiku telerite puhul peab tehase vaikeseade olema lubatud ülekatega. See "
+"tähendab, et te vaatate tõelise HD asemel alati \"suurendatud\" pilti ja "
+"kasutajarühma (naha) osad võivad olla nähtamatud.\n"
+"\n"
+"Kollane ala tähendab, et 5% täis-HD-pildi piiriala on nähtamatu.\n"
+"Roheline ala tähendab, et täis-HD-pildi 10% piiriala on nähtamatu.\n"
+"\n"
+"Teisisõnu, kui kollane kast vastab kõigile teie ekraani külgedele, siis on "
+"teil kõikidel külgedel vähemalt 5% ülekaal.\n"
+"\n"
+"Kui näete kõigi kaheksa noolepea näpunäiteid, siis on teie teler keelatud.\n"
+"\n"
+"Test Pattern TigerDave - www.tigerdave.com/ht_menu.htm"
+
+msgid "Wizard to arrange the overscan"
+msgstr "Võimalda ülemineku korraldamine."
+
+msgid ""
+"You did not see all eight arrow heads. This means your TV has overscan "
+"enabled and presents you with a zoomed-in picture, causing you to loose part "
+"of a full HD screen. In addition this you may also miss parts of the user "
+"interface, for example volume bars and more.\n"
+"\n"
+"You can now try to resize and change the position of the user interface "
+"until you see the eight arrow heads.\n"
+"\n"
+"When done press OK.\n"
+"\n"
+msgstr ""
+"Te ei näinud kõiki kaheksa noolepea. See tähendab, et teie teleril on "
+"lubatud ülekaalukiirus ja kuvatakse suumitud pilt, mis viib teid osa "
+"täieliku HD-ekraanist lahti. Lisaks võite ka vahele jätta kasutajaliidese "
+"osad, näiteks helitugevusribad jms.\n"
+"\n"
+"Nüüd saate proovida muuta suurust ja muuta kasutajaliidese positsiooni, kuni "
+"näete kaheksa noolepea.\n"
+"\n"
+"Kui olete valmis, vajutage OK.\n"
 
 msgid ""
 "\n"
@@ -1353,9 +1453,6 @@ msgstr "Muudatused"
 msgid "Channel"
 msgstr "Kanal"
 
-msgid "Channel 1 at start"
-msgstr "Käivitus kanalil 1"
-
 msgid "Channel Info"
 msgstr "Kanaliinfo"
 
@@ -1631,9 +1728,6 @@ msgstr ""
 "Määra, mitu minutit lõppenud saateid veel saatekavas näidatakse. Kasulik, "
 "kui soovid midagi teada saatest, mis on  just lõppenud või mille algamine "
 "venib."
-
-msgid "Configure how recording filenames are constructed."
-msgstr "Määra, millisel kujul salvestuste nimed luuakse"
 
 msgid ""
 "Configure if and how crypto icons will be shown in the channel selection "
@@ -2215,9 +2309,6 @@ msgstr "Viiteaeg enne võtme kordamist:"
 msgid "Delay before sequence repeat"
 msgstr "Viiteaeg enne jada kordust"
 
-msgid "Delay between DiSEqC commands"
-msgstr "Viiteaeg diseqc käskude vahel"
-
 msgid "Delay between switch and motor command"
 msgstr "Viiteaeg SWITCH ja ajami käsu vahel"
 
@@ -2340,9 +2431,6 @@ msgstr "DiSEqC-testeri seadistused"
 
 msgid "Digital contour removal"
 msgstr "Digitaalse kontuuri kõrvaldamine"
-
-msgid "Digital downmix"
-msgstr "Digitaalne heli > stereo"
 
 msgid "Direct playback of linked titles without menu"
 msgstr "Lingitud salvestuste kohene esitus ilma menüüta"
@@ -2534,12 +2622,6 @@ msgstr "Kas uuendad %s %s tarkvara?"
 msgid "Do you want to upgrade the package:\n"
 msgstr "Kas uuendad paketi:\n"
 
-msgid "Dobly Digital downmix is now"
-msgstr "Dolby Digital / DTS > stereo on"
-
-msgid "Dolby Digital / DTS downmix"
-msgstr "Dolby Digital / DTS > stereo"
-
 msgid "Don't save"
 msgstr "Ära salvesta"
 
@@ -2644,9 +2726,6 @@ msgstr "Ecm:"
 
 msgid "Edit"
 msgstr "Muuda"
-
-msgid "Edit DNS"
-msgstr "DNS muutmine"
 
 msgid "Edit chapters of current title"
 msgstr "Muuda seda pealkirja"
@@ -2943,9 +3022,6 @@ msgstr "Väliste subtiitrite värv"
 
 msgid "Extra motor options"
 msgstr "Mootori lisavalikud"
-
-msgid "F1/F3"
-msgstr "F1/F3"
 
 msgid "F1/LAN"
 msgstr "F1/LAN"
@@ -3279,29 +3355,17 @@ msgstr "Kõvaketta seaded"
 msgid "Hebrew"
 msgstr "Heebrea"
 
-msgid "Height"
-msgstr "Kõrgus"
-
 msgid "Help"
 msgstr "Help"
 
 msgid "Help long"
 msgstr "Help - pikk"
 
-msgid "Helps setting up your antenna"
-msgstr "Hõlbustab antenni seadistamist"
-
 msgid "Hidden network"
 msgstr "Varjatud võrk"
 
-msgid "Hide CI messages"
-msgstr "CI teadete peitmine"
-
 msgid "Hide any zap error messages."
 msgstr "Peida kanalivahetuse veateated"
-
-msgid "Hide error messages from the Common Interface module."
-msgstr "Peida CI mooduli veateated."
 
 msgid "Hide known extensions"
 msgstr "Tuntud laiendite peitmine"
@@ -3594,9 +3658,6 @@ msgstr "Inotify jälgimine"
 
 msgid "Input"
 msgstr "Vali"
-
-msgid "Input device setup"
-msgstr "Sisendseadmete seadistamine"
 
 msgid "Input devices"
 msgstr "Sisendseadmed"
@@ -3905,9 +3966,6 @@ msgid_plural "List version %d, found %d channels"
 msgstr[0] "List version %d, leitud %d kanal"
 msgstr[1] "List version %d, leitud %d kanalit"
 
-msgid "List/Fav/PVR"
-msgstr "List/Fav/PVR"
-
 msgid "Listen to the radio..."
 msgstr "Kuula raadiot..."
 
@@ -3925,9 +3983,6 @@ msgstr "EPG laadimine"
 
 msgid "Load playlist"
 msgstr "Lae esitusloend"
-
-msgid "Load/Save"
-msgstr "Laadimine/salvestamine"
 
 msgid "Local box"
 msgstr "Kohalik vastuvõtja"
@@ -4160,17 +4215,11 @@ msgstr "Haakepunktid"
 msgid "Move"
 msgstr "Liiguta"
 
-msgid "Move Left/Right"
-msgstr "Liigu vasakule/paremale"
-
 msgid "Move PIP"
 msgstr "PiP liigutamine"
 
 msgid "Move PiP to main picture"
 msgstr "Muuda PiP peapildiks"
-
-msgid "Move Up/Down"
-msgstr "Liigu üles/alla"
 
 msgid "Move down a page"
 msgstr "Liigu lehe lõppu"
@@ -4429,15 +4478,6 @@ msgstr "Vaba indeks puudub"
 msgid "No free tuner!"
 msgstr "Pole vaba tuunerit!"
 
-msgid "No httpport defined in oscam.conf. This value is required!"
-msgstr "Oscam.conf failis on 'httpport' määramata. See väärtus on kohustuslik!"
-
-msgid "No httppwd defined in oscam.conf"
-msgstr "Oscam.conf failis on 'httppwd' määramata."
-
-msgid "No httpuser defined in oscam.conf"
-msgstr "Oscam.conf failis on 'httpuser' määramata."
-
 msgid "No network connection available."
 msgstr "Võrguühendus pole saadaval."
 
@@ -4685,9 +4725,6 @@ msgstr "Üks rida"
 msgid "OnlineVersionCheck"
 msgstr "Uuenduste kontroll"
 
-msgid "Only active when in standby"
-msgstr "Aktiivne ainult ooterežiimis"
-
 msgid "Only extensions."
 msgstr "Ainult laiendused."
 
@@ -4891,14 +4928,8 @@ msgstr "Pilot"
 msgid "Play"
 msgstr "Esita"
 
-msgid "Play Audio-CD..."
-msgstr "Esita heliplaat..."
-
 msgid "Play DVD"
 msgstr "Esita DVD"
-
-msgid "Play Music..."
-msgstr "Mängi muusikat..."
 
 msgid "Play audio in background"
 msgstr "Taustal heli edastamine"
@@ -5111,9 +5142,6 @@ msgstr "Oota kuni võrguseaded aktiveeritakse..."
 
 msgid "Please wait while gathering data..."
 msgstr "Oota andmete kogumist..."
-
-msgid "Please wait while scanning for devices..."
-msgstr "Oota andmekandjate tuvastamist..."
 
 msgid "Please wait while scanning is in progress..."
 msgstr "Oota otsingu lõppemist..."
@@ -6853,9 +6881,6 @@ msgstr "Järjestuse aluseks"
 msgid "Sort list:"
 msgstr "Järjesta loend:"
 
-msgid "Sort plug-in browser alphabetically"
-msgstr "Laiendused tähestiku järjekorras"
-
 msgid "Sound"
 msgstr "Heli"
 
@@ -6885,9 +6910,6 @@ msgstr "Sport"
 
 msgid "Standard"
 msgstr "Tavaline"
-
-msgid "Standart list"
-msgstr "Tavanimekiri"
 
 msgid "Standby"
 msgstr "Ooterežiim"
@@ -7283,13 +7305,6 @@ msgstr ""
 "Paigalda see."
 
 msgid ""
-"The Filesystem on your Timeshift-Device does not support hardlinks.\n"
-"Make sure it is formatted in EXT2 or EXT3!"
-msgstr ""
-"Ajanihkeks valitud andmekandja ei toeta hardlinke.\n"
-"Vorminda see EXT2 või EXT3 failisüsteemi!"
-
-msgid ""
 "The IMDb plugin is not installed!\n"
 "Please install it."
 msgstr ""
@@ -7422,9 +7437,6 @@ msgstr "Täitmata tegevusi ei ole."
 msgid "There are no updates available."
 msgstr "Uuendusi ei ole saadaval."
 
-msgid "There is no [webif] section in oscam.conf"
-msgstr "'oscam.conf' ei oma veebiliidest"
-
 msgid "There is no signal to lock on !"
 msgstr "Lukustamiseks puudub signaal!"
 
@@ -7533,12 +7545,6 @@ msgid ""
 "This option allows you to choose how to display standard defintion video on "
 "your TV."
 msgstr "See valik määrab, kuidas kuvatakse SD sisu teleekraanil."
-
-msgid "This option allows you to disable sorting of the menus"
-msgstr "Siin saab keelata menüüde ümberjärjestamise"
-
-msgid "This option allows you to disable sorting of the plugin browser."
-msgstr "Siin saab keelata laienduste menüü ümberjärjestamise."
 
 msgid "This option allows you to view the old and new settings side by side."
 msgstr "See valik võimaldab vaadelda uusi ja vanu seadistusi kõrvuti."
@@ -7983,9 +7989,6 @@ msgstr "Tuuneri seaded"
 msgid "Tuner is not supported"
 msgstr "Tuuner ei ole toetatud"
 
-msgid "Tuner not available."
-msgstr "Tuuner ei ole kättesaadav."
-
 msgid "Tuner settings"
 msgstr "Tuuneri seaded"
 
@@ -7994,9 +7997,6 @@ msgstr "Tuuneri pesa"
 
 msgid "Tuner status"
 msgstr "Tuuneri olek"
-
-msgid "Tuner type"
-msgstr "Tuuneri tüüp"
 
 msgid "Turkish"
 msgstr "Türgi"
@@ -8204,17 +8204,6 @@ msgstr "Kasuta võimsuse mõõtmist"
 msgid "Use slim screen"
 msgstr "Väikese vaate kasutamine"
 
-msgid ""
-"Use the Left/Right buttons on your remote to adjust the size of the user "
-"interface. Left button decreases the size, Right increases the size."
-msgstr ""
-"Kasuta ekraanikuva suuruse muutmiseks VASAK/PAREM nuppe. VASAK vähendab ja "
-"PAREM suurendab."
-
-msgid ""
-"Use the Left/Right buttons on your remote to move the user interface up/down"
-msgstr "Kasuta ekraanikuva üles/alla liigutamiseks VASAK/PAREM nuppe."
-
 msgid "Use the alternative or the conventional radio mode."
 msgstr "Kasuta alternatiivset või tavapärast raadiovaadet."
 
@@ -8360,14 +8349,8 @@ msgstr "Resolutsioon"
 msgid "View"
 msgstr "Vaata"
 
-msgid "View Movies..."
-msgstr "Vaata filme..."
-
 msgid "View Rass interactive..."
 msgstr "Vaata Rass interactive..."
-
-msgid "View Video CD..."
-msgstr "Vaata video CD-d..."
 
 msgid "View details"
 msgstr "Vaata üksikasju"
@@ -8558,9 +8541,6 @@ msgstr ""
 "Mida teha taimeri lõppemisel? 'Automaatne' laseb vastuvõtjal minna olekusse, "
 "mis oli enne taimeri alustamist. 'Ära tee midagi', 'mine ooterežiimi' ja "
 "'mine sügavooterežiimi' teevad just seda, mis kirjas."
-
-msgid "What date of month ?"
-msgstr "Mis kuupäev?"
 
 msgid "What do you want to scan?"
 msgstr "Mida soovid otsida?"
@@ -8760,9 +8740,6 @@ msgstr "Millise saate soovid lõplikult salvestada?"
 
 msgid "White"
 msgstr "Valge"
-
-msgid "Width"
-msgstr "Laius"
 
 msgid "Wireless LAN"
 msgstr "Traadita LAN"
@@ -9253,9 +9230,6 @@ msgstr "a.m."
 
 msgid "and never ask again this session again"
 msgstr "ja selle seansi jooksul rohem ei küsita"
-
-msgid "are you sure to cancel all changes"
-msgstr "kas tühistad kõik muudatused"
 
 msgid "arts/culture (without music, general)"
 msgstr "kunst/kultuur (välja arvatud muusika)"
@@ -9833,9 +9807,6 @@ msgstr "üks kord"
 msgid "only HD"
 msgstr "ainult HD"
 
-msgid "open nameserver configuration"
-msgstr "nimeserveri seaded"
-
 msgid "original"
 msgstr "algupärane"
 
@@ -10249,9 +10220,6 @@ msgstr "vertikaalne"
 
 msgid "view extensions..."
 msgstr "näita laiendusi..."
-
-msgid "wait for ci..."
-msgstr "ci ootel..."
 
 msgid "wait for mmi..."
 msgstr "mmi ootel..."

@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenEsi v2.0 Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 15:33+0200\n"
+"POT-Creation-Date: 2017-10-15 19:02+0200\n"
 "PO-Revision-Date: 2015-10-28 08:56+0000\n"
 "Last-Translator: OpenEsi-Image <openesi@openesi.eu>\n"
-"Language-Team: Italian"
-"eurosat/language/en_GB/)\n"
+"Language-Team: Italianeurosat/language/en_GB/)\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,6 +18,112 @@ msgstr ""
 "X-Poedit-SearchPath-1: /Users/eleonor/Documents/Sorgenti/multiboot-plugin\n"
 "X-Poedit-SearchPath-2: /Users/eleonor/Documents/Sorgenti/PoEditXml\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+
+msgid "Do you want to quit the overscan wizard?"
+msgstr "Do you want to quit the overscan wizard?"
+
+msgid ""
+"It seems you did not see all the eight arrow heads. This means your TV is "
+"has overscan enabled, and is not configured properly.\n"
+"\n"
+"Please refer to your TVs manual to find how you can disable overscan on your "
+"TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, "
+"ask other users at http://openesi.eu.\n"
+"\n"
+msgstr ""
+"It seems you did not see all the eight arrow heads. This means your TV is "
+"has overscan enabled, and is not configured properly.\n"
+"\n"
+"Please refer to your TVs manual to find how you can disable overscan on your "
+"TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, "
+"ask other users at http://openesi.eu.\n"
+"\n"
+
+msgid "Overscan wizard"
+msgstr "Overscan wizard"
+
+msgid "Did you see all eight arrow heads?"
+msgstr "Did you see all eight arrow heads?"
+
+msgid ""
+"The overscan wizard has been completed.\n"
+"\n"
+"Note: you can always start the Overscan wizard later,  via\n"
+"\n"
+"menu->Configuration->Video-Audio-Osd-Display->Display and OSD"
+msgstr ""
+"The overscan wizard has been completed.\n"
+"\n"
+"Note: you can always start the Overscan wizard later,  via\n"
+"\n"
+"menu->Configuration->Video-Audio-Osd-Display->Display and OSD"
+
+msgid ""
+"The overscan wizard helps you to setup your TV in the correct way.\n"
+"\n"
+"For the majority of TV's, the factory default is to have overscan enabled. "
+"This means you are always watching a \"zoomed in\" picture instead of real "
+"HD, and parts of the user inferface (skin) may be invisible.\n"
+"\n"
+"The yellow area means a 5% border area of a full HD picture will be "
+"invisible.\n"
+"The green area means a 10% border area of a full HD picture will be "
+"invisible.\n"
+"\n"
+"In other words, if the yellow box meets all for sides of your screen, then "
+"you have at least 5% overscan on all sides.\n"
+"\n"
+"If you see the tips of all eight arrowheads, then your TV has overscan "
+"disabled.\n"
+"\n"
+"Test Pattern by TigerDave - www.tigerdave.com/ht_menu.htm"
+
+msgstr ""
+"The overscan wizard helps you to setup your TV in the correct way.\n"
+"\n"
+"For the majority of TV's, the factory default is to have overscan enabled. "
+"This means you are always watching a \"zoomed in\" picture instead of real "
+"HD, and parts of the user inferface (skin) may be invisible.\n"
+"\n"
+"The yellow area means a 5% border area of a full HD picture will be "
+"invisible.\n"
+"The green area means a 10% border area of a full HD picture will be "
+"invisible.\n"
+"\n"
+"In other words, if the yellow box meets all for sides of your screen, then "
+"you have at least 5% overscan on all sides.\n"
+"\n"
+"If you see the tips of all eight arrowheads, then your TV has overscan "
+"disabled.\n"
+"\n"
+"Test Pattern by TigerDave - www.tigerdave.com/ht_menu.htm"
+
+msgid "Wizard to arrange the overscan"
+msgstr ""
+"Wizard to arrange the overscan."
+
+msgid ""
+"You did not see all eight arrow heads. This means your TV has overscan "
+"enabled and presents you with a zoomed-in picture, causing you to loose part "
+"of a full HD screen. In addition this you may also miss parts of the user "
+"interface, for example volume bars and more.\n"
+"\n"
+"You can now try to resize and change the position of the user interface "
+"until you see the eight arrow heads.\n"
+"\n"
+"When done press OK.\n"
+"\n"
+msgstr ""
+"You did not see all eight arrow heads. This means your TV has overscan "
+"enabled and presents you with a zoomed-in picture, causing you to loose part "
+"of a full HD screen. In addition this you may also miss parts of the user "
+"interface, for example volume bars and more.\n"
+"\n"
+"You can now try to resize and change the position of the user interface "
+"until you see the eight arrow heads.\n"
+"\n"
+"When done press OK.\n"
+"\n"
 
 msgid ""
 "\n"
@@ -1263,9 +1368,6 @@ msgstr "Channel"
 msgid "Channel +/- button mode"
 msgstr "Channel +/- button mode"
 
-msgid "Channel 1 at start"
-msgstr "Channel 1 at start"
-
 msgid "Channel Info"
 msgstr "Channel Info"
 
@@ -1521,9 +1623,6 @@ msgstr ""
 "Configure for how many minutes finished events should remain visible in the "
 "EPG. Useful when you need information about an event which has just "
 "finished, or has been delayed."
-
-msgid "Configure how recording filenames are constructed."
-msgstr "Configure how recording filenames are constructed."
 
 msgid "Configure if and how service type icons will be shown."
 msgstr "Configure if and how service type icons will be shown."
@@ -2141,9 +2240,6 @@ msgstr "DiSEqC-tester settings"
 msgid "Digital contour removal"
 msgstr "Digital contour removal"
 
-msgid "Digital downmix"
-msgstr "Digital downmix"
-
 msgid "Direct playback of linked titles without menu"
 msgstr "Direct playback of linked titles without menu"
 
@@ -2173,9 +2269,6 @@ msgstr "Disabled"
 
 msgid "Disk space to reserve for recordings (in GB)"
 msgstr "Disk space to reserve for recordings (in GB)"
-
-msgid "Display"
-msgstr "Display"
 
 msgid "Display 16:9 content as"
 msgstr "Display 16:9 content as"
@@ -2331,9 +2424,6 @@ msgstr "Do you want to update your %s %s ?"
 msgid "Do you want to upgrade the package:\n"
 msgstr "Do you want to upgrade the package:\n"
 
-msgid "Dolby Digital / DTS downmix"
-msgstr "Dolby Digital / DTS downmix"
-
 msgid "Don't save"
 msgstr "Don't save"
 
@@ -2435,9 +2525,6 @@ msgstr "Ecm:"
 
 msgid "Edit"
 msgstr "Edit"
-
-msgid "Edit DNS"
-msgstr "Edit DNS"
 
 msgid "Edit chapters of current title"
 msgstr "Edit chapters of current title"
@@ -2975,20 +3062,11 @@ msgstr "Hard disk standby after"
 msgid "Hebrew"
 msgstr "Hebrew"
 
-msgid "Height"
-msgstr "Height"
-
 msgid "Hidden network"
 msgstr "Hidden network"
 
-msgid "Hide CI messages"
-msgstr "Hide CI messages"
-
 msgid "Hide any zap error messages."
 msgstr "Hide any zap error messages."
-
-msgid "Hide error messages from the Common Interface module."
-msgstr "Hide error messages from the Common Interface module."
 
 msgid "Hide known extensions"
 msgstr "Hide known extensions"
@@ -3263,9 +3341,6 @@ msgstr "Inotify Monitoring"
 
 msgid "Input"
 msgstr "Input"
-
-msgid "Input device setup"
-msgstr "Input device setup"
 
 msgid "Input devices"
 msgstr "Input devices"
@@ -3578,9 +3653,6 @@ msgstr "Load EPG"
 msgid "Load playlist"
 msgstr "load playlist"
 
-msgid "Load/Save"
-msgstr "Load/Save"
-
 msgid "Local box"
 msgstr "Local box"
 
@@ -3785,14 +3857,8 @@ msgstr "Mounts Setup"
 msgid "Move"
 msgstr "Move"
 
-msgid "Move Left/Right"
-msgstr "Move Left/Right"
-
 msgid "Move PiP to main picture"
 msgstr "Move PiP to main picture"
-
-msgid "Move Up/Down"
-msgstr "Move Up/Down"
 
 msgid "Move down a page"
 msgstr "Move down a page"
@@ -4042,15 +4108,6 @@ msgstr "No free index available"
 msgid "No free tuner!"
 msgstr "No free tuner!"
 
-msgid "No httpport defined in oscam.conf. This value is required!"
-msgstr "No httpport defined in oscam.conf. This value is required!"
-
-msgid "No httppwd defined in oscam.conf"
-msgstr "No httppwd defined in oscam.conf"
-
-msgid "No httpuser defined in oscam.conf"
-msgstr "No httpuser defined in oscam.conf"
-
 msgid "No network connection available."
 msgstr "No network connection available."
 
@@ -4287,9 +4344,6 @@ msgstr "One line"
 msgid "OnlineVersionCheck"
 msgstr "OnlineVersionCheck"
 
-msgid "Only active when in standby"
-msgstr "Only active when in standby"
-
 msgid "Only extensions."
 msgstr "Only extensions."
 
@@ -4474,14 +4528,8 @@ msgstr "Pilot"
 msgid "Play"
 msgstr "Play"
 
-msgid "Play Audio-CD..."
-msgstr "Play Audio-CD..."
-
 msgid "Play DVD"
 msgstr "Play DVD"
-
-msgid "Play Music..."
-msgstr "Play Music..."
 
 msgid "Play audio in background"
 msgstr "Play audio in background"
@@ -5715,9 +5763,6 @@ msgstr "Set fixed"
 msgid "Set fps for external subtitles"
 msgstr "Set fps for external subtitles"
 
-msgid "Set interface as default Interface"
-msgstr "Set interface as default Interface"
-
 msgid "Set limits"
 msgstr "Set limits"
 
@@ -6248,9 +6293,6 @@ msgstr "Sort EPG List"
 msgid "Sort list by"
 msgstr "Sort list by"
 
-msgid "Sort plug-in browser alphabetically"
-msgstr "Sort plug-in browser alphabetically"
-
 msgid "Sound"
 msgstr "Sound"
 
@@ -6623,13 +6665,6 @@ msgstr ""
 "Please install it."
 
 msgid ""
-"The Filesystem on your Timeshift-Device does not support hardlinks.\n"
-"Make sure it is formatted in EXT2 or EXT3!"
-msgstr ""
-"The Filesystem on your Timeshift-Device does not support hardlinks.\n"
-"Make sure it is formatted in EXT2 or EXT3!"
-
-msgid ""
 "The IMDb plugin is not installed!\n"
 "Please install it."
 msgstr ""
@@ -6771,9 +6806,6 @@ msgstr "There are currently no outstanding actions."
 msgid "There are no updates available."
 msgstr "There are no updates available."
 
-msgid "There is no [webif] section in oscam.conf"
-msgstr "There is no [webif] section in oscam.conf"
-
 msgid "There is no signal to lock on !"
 msgstr "There is no signal to lock on !"
 
@@ -6872,12 +6904,6 @@ msgid ""
 msgstr ""
 "This option allows you to choose how to display standard defintion video on "
 "your TV."
-
-msgid "This option allows you to disable sorting of the menus"
-msgstr "This option allows you to disable sorting of the menus"
-
-msgid "This option allows you to disable sorting of the plugin browser."
-msgstr "This option allows you to disable sorting of the plugin browser."
 
 msgid "This option allows you to enable 3D Surround Sound."
 msgstr "This option allows you to enable 3D Surround Sound."
@@ -7317,9 +7343,6 @@ msgstr "Tuner slot"
 msgid "Tuner status"
 msgstr "Tuner status"
 
-msgid "Tuner type"
-msgstr "Tuner type"
-
 msgid "Turkish"
 msgstr "Turkish"
 
@@ -7493,18 +7516,6 @@ msgstr "Use power measurement"
 msgid "Use slim screen"
 msgstr "Use slim screen"
 
-msgid ""
-"Use the Left/Right buttons on your remote to adjust the size of the user "
-"interface. Left button decreases the size, Right increases the size."
-msgstr ""
-"Use the Left/Right buttons on your remote to adjust the size of the user "
-"interface. Left button decreases the size, Right increases the size."
-
-msgid ""
-"Use the Left/Right buttons on your remote to move the user interface up/down"
-msgstr ""
-"Use the Left/Right buttons on your remote to move the user interface up/down"
-
 msgid "Use the alternative or the conventional radio mode."
 msgstr "Use the alternative or the conventional radio mode."
 
@@ -7644,14 +7655,8 @@ msgstr "Video size"
 msgid "View"
 msgstr "View"
 
-msgid "View Movies..."
-msgstr "View Movies..."
-
 msgid "View Rass interactive..."
 msgstr "View Rass interactive..."
-
-msgid "View Video CD..."
-msgstr "View Video CD..."
 
 msgid "View details"
 msgstr "View details"
@@ -7843,9 +7848,6 @@ msgstr ""
 "What action is required on complettion of the timer? 'Auto' lets the box "
 "return to the state it had when the timer started. 'Do nothing', 'Go to "
 "standby' and 'Go to deep standby' do ecaxtly that."
-
-msgid "What date of month ?"
-msgstr "Which date of month?"
 
 msgid "What do you want to scan?"
 msgstr "What do you want to scan?"
@@ -8055,9 +8057,6 @@ msgstr "Which event do you want to save permanently?"
 
 msgid "White"
 msgstr "White"
-
-msgid "Width"
-msgstr "Width"
 
 msgid "Wireless LAN"
 msgstr "Wireless LAN"
@@ -9067,9 +9066,6 @@ msgstr "once"
 msgid "only HD"
 msgstr "only HD"
 
-msgid "open nameserver configuration"
-msgstr "open nameserver configuration"
-
 msgid "original"
 msgstr "original"
 
@@ -9468,9 +9464,6 @@ msgstr "vertical"
 
 msgid "view extensions..."
 msgstr "view extensions..."
-
-msgid "wait for ci..."
-msgstr "wait for ci..."
 
 msgid "wait for mmi..."
 msgstr "wait for mmi..."

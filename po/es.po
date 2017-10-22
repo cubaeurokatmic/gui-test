@@ -2,16 +2,122 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenEsi v2.0 Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-20 15:33+0200\n"
-"PO-Revision-Date: 2015-10-28 08:56+0000\n"
+"POT-Creation-Date: 2017-10-15 19:02+0200\n"
+"PO-Revision-Date: 2017-10-21 16:53+0200\n"
 "Last-Translator: OpenEsi-Image <openesi@openesi.eu>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
+"Language-Team: \n"
+
+msgid "Do you want to quit the overscan wizard?"
+msgstr "¿Desea salir del asistente de overscan?"
+
+msgid ""
+"It seems you did not see all the eight arrow heads. This means your TV is "
+"has overscan enabled, and is not configured properly.\n"
+"\n"
+"Please refer to your TVs manual to find how you can disable overscan on your "
+"TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, "
+"ask other users at http://openesi.eu.\n"
+"\n"
+msgstr ""
+"Parece que no viste las ocho cabezas de flechas. Esto significa que su TV "
+"tiene el overscan habilitado y no está configurado correctamente.\n"
+"\n"
+"Consulte el manual de su televisor para ver cómo puede desactivar el "
+"overscan en su televisor. Busque términos como 'Apropiado', 'Ancho total', "
+"etc. Si no puede encontrarlo, consulte a otros usuarios en http://openesi."
+"eu.\n"
+
+msgid "Overscan wizard"
+msgstr "Asistente de overscan"
+
+msgid "Did you see all eight arrow heads?"
+msgstr "¿Viste las ocho puntas de flecha?"
+
+msgid ""
+"The overscan wizard has been completed.\n"
+"\n"
+"Note: you can always start the Overscan wizard later,  via\n"
+"\n"
+"menu->Configuration->Video-Audio-Osd-Display->Display and OSD"
+msgstr ""
+"El asistente de overscan ha sido completado.\n"
+"\n"
+"Nota: siempre puede iniciar el asistente Overscan más tarde, a través de\n"
+"\n"
+"menú-> Configuración-> Video-Audio-Osd-Display-> Pantalla y OSD"
+
+msgid ""
+"The overscan wizard helps you to setup your TV in the correct way.\n"
+"\n"
+"For the majority of TV's, the factory default is to have overscan enabled. "
+"This means you are always watching a \"zoomed in\" picture instead of real "
+"HD, and parts of the user inferface (skin) may be invisible.\n"
+"\n"
+"The yellow area means a 5% border area of a full HD picture will be "
+"invisible.\n"
+"The green area means a 10% border area of a full HD picture will be "
+"invisible.\n"
+"\n"
+"In other words, if the yellow box meets all for sides of your screen, then "
+"you have at least 5% overscan on all sides.\n"
+"\n"
+"If you see the tips of all eight arrowheads, then your TV has overscan "
+"disabled.\n"
+"\n"
+"Test Pattern by TigerDave - www.tigerdave.com/ht_menu.htm"
+msgstr ""
+"El asistente de sobreexploración le ayuda a configurar su TV de la manera "
+"correcta.\n"
+"\n"
+"Para la mayoría de los televisores, el valor predeterminado de fábrica es "
+"habilitar el overscan. Esto significa que siempre está viendo una imagen "
+"\"ampliada\" en lugar de HD real, y partes de la superficie inferida "
+"(máscara) del usuario pueden ser invisibles.\n"
+"\n"
+"El área amarilla significa que un área de borde del 5% de una imagen Full HD "
+"será invisible.\n"
+"El área verde significa que un área de borde del 10% de una imagen HD "
+"completa será invisible.\n"
+"\n"
+"En otras palabras, si el cuadro amarillo se encuentra con todos los lados de "
+"la pantalla, entonces tiene al menos un 5% de overscan en todos los lados.\n"
+"\n"
+"Si ves las puntas de las ocho puntas de flecha, entonces tu TV tiene el "
+"overscan deshabilitado.\n"
+"\n"
+"Test Pattern por TigerDave - www.tigerdave.com/ht_menu.htm"
+
+msgid "Wizard to arrange the overscan"
+msgstr "Asistente para organizar el overscan."
+
+msgid ""
+"You did not see all eight arrow heads. This means your TV has overscan "
+"enabled and presents you with a zoomed-in picture, causing you to loose part "
+"of a full HD screen. In addition this you may also miss parts of the user "
+"interface, for example volume bars and more.\n"
+"\n"
+"You can now try to resize and change the position of the user interface "
+"until you see the eight arrow heads.\n"
+"\n"
+"When done press OK.\n"
+"\n"
+msgstr ""
+"No viste las ocho cabezas de flecha. Esto significa que su TV tiene el "
+"overscan habilitado y le presenta una imagen ampliada, causando que pierda "
+"parte de una pantalla Full HD. Además, también puede omitir partes de la "
+"interfaz de usuario, por ejemplo, barras de volumen y más.\n"
+"\n"
+"Ahora puede intentar cambiar el tamaño y cambiar la posición de la interfaz "
+"de usuario hasta que vea las ocho puntas de flecha.\n"
+"\n"
+"Cuando termine, presione OK.\n"
 
 msgid ""
 "\n"
@@ -1066,9 +1172,6 @@ msgstr "Canal"
 msgid "Channel +/- button mode"
 msgstr "Modo de tecla de canal +/-"
 
-msgid "Channel 1 at start"
-msgstr "Canal 1 al inicio"
-
 msgid "Channel Info"
 msgstr "Información de canal"
 
@@ -1307,9 +1410,6 @@ msgstr ""
 "Configura durante cuántos minutos siguen visibles los programas terminados "
 "en el EPG. Es útil cuando necesites información de un programa que acaba de "
 "terminar o se ha retrasado."
-
-msgid "Configure how recording filenames are constructed."
-msgstr "Configura cómo se construyen los nombres de archivo de grabación."
 
 msgid "Configure interface"
 msgstr "Configurar interfaz"
@@ -1897,9 +1997,6 @@ msgstr "Configuración de DiSEqC-Tester"
 msgid "Digital contour removal"
 msgstr "Borrar contorno digital"
 
-msgid "Digital downmix"
-msgstr "Mezcla digital"
-
 msgid "Direct playback of linked titles without menu"
 msgstr "Reproduce los títulos enlazados sin menú"
 
@@ -2170,9 +2267,6 @@ msgstr "Ecm:"
 
 msgid "Edit"
 msgstr "Editar"
-
-msgid "Edit DNS"
-msgstr "Editar DNS"
 
 msgid "Edit chapters of current title"
 msgstr "Editar capítulos del programa actual"
@@ -2680,20 +2774,11 @@ msgstr "Disco duro en modo de espera después"
 msgid "Hebrew"
 msgstr "Hebreo"
 
-msgid "Height"
-msgstr "Altura"
-
 msgid "Hidden network"
 msgstr "Red oculta"
 
-msgid "Hide CI messages"
-msgstr "Ocultar mensajes CI"
-
 msgid "Hide any zap error messages."
 msgstr "Ocultar mensajes de error de zapping."
-
-msgid "Hide error messages from the Common Interface module."
-msgstr "Ocultar mensajes de eror del módulo de interfaz común."
 
 msgid "Hide known extensions"
 msgstr "Ocultar extensiones conocidas"
@@ -2955,9 +3040,6 @@ msgstr "Seguimiento de Inotify"
 
 msgid "Input"
 msgstr "Entrada"
-
-msgid "Input device setup"
-msgstr "Configuración del dispositivo de entrada"
 
 msgid "Input devices"
 msgstr "Dispositivos de entrada"
@@ -3255,9 +3337,6 @@ msgstr "Cargar EPG"
 msgid "Load playlist"
 msgstr "Cargar lista de reproducción."
 
-msgid "Load/Save"
-msgstr "Cargar/Guardar"
-
 msgid "Local box"
 msgstr "Receptor local"
 
@@ -3450,14 +3529,8 @@ msgstr "Configuración de montajes"
 msgid "Move"
 msgstr "Mover"
 
-msgid "Move Left/Right"
-msgstr "Mover izquierda/derecha"
-
 msgid "Move PiP to main picture"
 msgstr "Mover PiP a la imagen principal"
-
-msgid "Move Up/Down"
-msgstr "Mover arriba/abajo"
 
 msgid "Move down a page"
 msgstr "Bajar una página"
@@ -3705,16 +3778,6 @@ msgstr "Ningún número de posición disponible"
 
 msgid "No free tuner!"
 msgstr "No hay ningún sintonizador libre."
-
-msgid "No httpport defined in oscam.conf. This value is required!"
-msgstr ""
-"No se ha definido el puerto http en oscam.conf. Es obligatorio hacerlo."
-
-msgid "No httppwd defined in oscam.conf"
-msgstr "No se ha definido el puerto http en oscam.conf."
-
-msgid "No httpuser defined in oscam.conf"
-msgstr "No se ha definido el usuario http en oscam.conf"
 
 msgid "No network connection available."
 msgstr "No hay conexión de red disponible."
@@ -4120,14 +4183,8 @@ msgstr "Piloto"
 msgid "Play"
 msgstr "Reproducir"
 
-msgid "Play Audio-CD..."
-msgstr "Reproducir audio CD..."
-
 msgid "Play DVD"
 msgstr "Reproducir DVD"
-
-msgid "Play Music..."
-msgstr "Reproducir música"
 
 msgid "Play audio in background"
 msgstr "Reproducir audio al fondo"
@@ -4915,10 +4972,6 @@ msgstr "Sáb"
 msgid "Satellite"
 msgstr "Satélite"
 
-msgctxt "Satellite configuration mode"
-msgid "Mode"
-msgstr "Modo"
-
 msgid "Satellite dish setup"
 msgstr "Configuración de la antena."
 
@@ -5308,9 +5361,6 @@ msgstr "Establecer fijo"
 
 msgid "Set fps for external subtitles"
 msgstr "Establecer fps para subtítulos externos"
-
-msgid "Set interface as default Interface"
-msgstr "Configurar el interfaz como por defecto."
 
 msgid "Set limits"
 msgstr "Configurar límites"
@@ -5807,9 +5857,6 @@ msgstr "Ordenar lista EPG"
 msgid "Sort list by"
 msgstr "Ordenar lista por..."
 
-msgid "Sort plug-in browser alphabetically"
-msgstr "Ordenar el navegador de complementos alfabéticamente."
-
 msgid "Sound"
 msgstr "Sonido"
 
@@ -6173,14 +6220,6 @@ msgstr ""
 "Por favor, instálalo."
 
 msgid ""
-"The Filesystem on your Timeshift-Device does not support hardlinks.\n"
-"Make sure it is formatted in EXT2 or EXT3!"
-msgstr ""
-"El sistema de archivos de tu dispositivo Timeshift no soporta enlaces "
-"físicos.\n"
-"Asegúrate de que esté formateado en EXT2 o EXT3."
-
-msgid ""
 "The IMDb plugin is not installed!\n"
 "Please install it."
 msgstr ""
@@ -6312,9 +6351,6 @@ msgstr "Actualmente no hay ninguna acción en ejecución."
 msgid "There are no updates available."
 msgstr "No hay actualizaciones disponibles."
 
-msgid "There is no [webif] section in oscam.conf"
-msgstr "No hay apartado [webif] en oscam.conf."
-
 msgid "There is no signal to lock on !"
 msgstr "Sin señal que bloquear."
 
@@ -6366,13 +6402,6 @@ msgid ""
 "available."
 msgstr ""
 "Esta opción te permite elegir entre las dos listas de canales disponibles."
-
-msgid "This option allows you to disable sorting of the menus"
-msgstr "Esta opción te permite desactivar el orden de los menús."
-
-msgid "This option allows you to disable sorting of the plugin browser."
-msgstr ""
-"Esta opción te permite desactivar el orden del navegador de complementos."
 
 msgid "This option allows you to view the old and new settings side by side."
 msgstr "Esta opción te permite ver los ajustes nuevos y antiguos, lado a lado."
@@ -6767,9 +6796,6 @@ msgstr "Ranura del sintonizador"
 msgid "Tuner status"
 msgstr "Estado del sintonizador"
 
-msgid "Tuner type"
-msgstr "Tipo de sintonizador"
-
 msgid "Turkish"
 msgstr "Turco"
 
@@ -6928,20 +6954,6 @@ msgstr "Usar la medida de potencia."
 msgid "Use slim screen"
 msgstr "Usar la pantalla estrecha."
 
-msgid ""
-"Use the Left/Right buttons on your remote to adjust the size of the user "
-"interface. Left button decreases the size, Right increases the size."
-msgstr ""
-"Usar las teclas izquierda/derecha del mando para ajustar el tamaño de la "
-"interfaz de usuario. La tecla izquierda reduce el tamaño y la derecha lo "
-"aumenta."
-
-msgid ""
-"Use the Left/Right buttons on your remote to move the user interface up/down"
-msgstr ""
-"Usar las teclas izquierda/derecha del mando para mover la interfaz de "
-"usuario arriba y abajo."
-
 msgid "Use the alternative or the conventional radio mode."
 msgstr "Usar el modo de radio alternativo o convencional."
 
@@ -7066,10 +7078,6 @@ msgstr "Selección de modo de vídeo."
 msgid "Video output"
 msgstr "Salida de vídeo"
 
-msgctxt "Video output mode"
-msgid "Mode"
-msgstr "Modo"
-
 msgid "Video: %s fps"
 msgstr "Vídeo: %s fps"
 
@@ -7085,14 +7093,8 @@ msgstr "Tamaño de vídeo"
 msgid "View"
 msgstr "Ver"
 
-msgid "View Movies..."
-msgstr "Ver películas..."
-
 msgid "View Rass interactive..."
 msgstr "Ver Rass interactivo..."
-
-msgid "View Video CD..."
-msgstr "Ver vídeo CD..."
 
 msgid "View details"
 msgstr "Ver detalles"
@@ -7295,9 +7297,6 @@ msgstr ""
 "receptor vuelve a su estado al inicio del temporizador. \"No hacer nada\", "
 "\"suspender\" e \"hibernar\" hacen exactamente eso."
 
-msgid "What date of month ?"
-msgstr "¿Qué día del mes?"
-
 msgid "What do you want to scan?"
 msgstr "¿Qué quieres buscar?"
 
@@ -7494,9 +7493,6 @@ msgstr "¿Qué programa quieres guardar permanentemente?"
 
 msgid "White"
 msgstr "Blanco"
-
-msgid "Width"
-msgstr "Ancho"
 
 msgid "Wireless LAN"
 msgstr "Red LAN"
@@ -8200,13 +8196,6 @@ msgstr "Artesanía"
 msgid "handled"
 msgstr "Gestionado"
 
-msgid ""
-"has been sent to the ItalySat beta team.\n"
-"please quote"
-msgstr ""
-"Se ha enviado al equipo de ItalySat Beta.\n"
-"Cítalo, por favor."
-
 msgid "height"
 msgstr "Altura"
 
@@ -8424,9 +8413,6 @@ msgstr "En disco de sólo lectura."
 
 msgid "once"
 msgstr "Una vez"
-
-msgid "open nameserver configuration"
-msgstr "Abir la configuración del servidor de nombres."
 
 msgid "original"
 msgstr "Original"
@@ -8821,9 +8807,6 @@ msgstr "Vertical"
 
 msgid "view extensions..."
 msgstr "Ver extensiones..."
-
-msgid "wait for ci..."
-msgstr "Esperar a ci..."
 
 msgid "wait for mmi..."
 msgstr "Esperar a nmi..."
