@@ -2,124 +2,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenEsi v2.0 Enigma2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-15 19:02+0200\n"
-"PO-Revision-Date: 2017-10-21 16:38+0200\n"
+"POT-Creation-Date: 2015-08-20 15:33+0200\n"
+"PO-Revision-Date: 2015-10-28 08:56+0000\n"
 "Last-Translator: OpenEsi-Image <openesi@openesi.eu>\n"
+"eurosat/language/cs_CZ/)\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-KeywordsList: item;text;text=\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Language-Team: \n"
 "X-Poedit-SearchPath-0: /Users/eleonor/Documents/Sorgenti/enigma2\n"
 "X-Poedit-SearchPath-1: /Users/eleonor/Documents/Sorgenti/multiboot-plugin\n"
 "X-Poedit-SearchPath-2: /Users/eleonor/Documents/Sorgenti/PoEditXml\n"
-
-msgid "Do you want to quit the overscan wizard?"
-msgstr "Chcete ukončit průvodce?"
-
-msgid ""
-"It seems you did not see all the eight arrow heads. This means your TV is "
-"has overscan enabled, and is not configured properly.\n"
-"\n"
-"Please refer to your TVs manual to find how you can disable overscan on your "
-"TV. Look for terms like 'Just fit', 'Full width', etc. If you can't find it, "
-"ask other users at http://openesi.eu.\n"
-"\n"
-msgstr ""
-"Zdá se, že jste neviděli všech osm hlav. To znamená, že váš televizor je "
-"aktivován a není správně nakonfigurován.\n"
-"\n"
-"Přečtěte si v příručce televizorů, abyste zjistili, jak můžete v televizoru "
-"vypnout přehřátí. Podívejte se na termíny jako \"Stačí fit\", \"Celá šířka\" "
-"atd. Pokud ho nemůžete najít, požádejte ostatní uživatele na http://openesi."
-"eu.\n"
-
-msgid "Overscan wizard"
-msgstr "Průvodce překročením"
-
-msgid "Did you see all eight arrow heads?"
-msgstr "Viděli jste všechny osmi šipky?"
-
-msgid ""
-"The overscan wizard has been completed.\n"
-"\n"
-"Note: you can always start the Overscan wizard later,  via\n"
-"\n"
-"menu->Configuration->Video-Audio-Osd-Display->Display and OSD"
-msgstr ""
-"Spuštěn průvodce byl překročen.\n"
-"\n"
-"Poznámka: Průvodce Overscan můžete vždy spustit později\n"
-"\n"
-"menu-> Konfigurace-> Video-Audio-Osd-Displej-> Displej a OSD"
-
-msgid ""
-"The overscan wizard helps you to setup your TV in the correct way.\n"
-"\n"
-"For the majority of TV's, the factory default is to have overscan enabled. "
-"This means you are always watching a \"zoomed in\" picture instead of real "
-"HD, and parts of the user inferface (skin) may be invisible.\n"
-"\n"
-"The yellow area means a 5% border area of a full HD picture will be "
-"invisible.\n"
-"The green area means a 10% border area of a full HD picture will be "
-"invisible.\n"
-"\n"
-"In other words, if the yellow box meets all for sides of your screen, then "
-"you have at least 5% overscan on all sides.\n"
-"\n"
-"If you see the tips of all eight arrowheads, then your TV has overscan "
-"disabled.\n"
-"\n"
-"Test Pattern by TigerDave - www.tigerdave.com/ht_menu.htm"
-msgstr ""
-"Průvodce overscan vám pomůže správně nastavit televizor.\n"
-"\n"
-"U většiny televizorů je výchozí nastavení z výroby povoleno přehrávání. To "
-"znamená, že jste vždy sledovali snímek \"zvětšený\" namísto skutečného HD, a "
-"části uživatele inferface (skin) mohou být neviditelné.\n"
-"\n"
-"Žlutá oblast znamená, že 5% hranice oblasti s plným HD obrazem bude "
-"neviditelné.\n"
-"Zelená oblast znamená 10% hraniční oblast s plným HD obrazem, která bude "
-"neviditelná.\n"
-"\n"
-"Jinými slovy, pokud se žlutá krabička setkává po stranách vaší obrazovky, "
-"máte minimálně 5% překročení na všech stranách.\n"
-"\n"
-"Vidíte-li tipy všech osmi šipek, váš televizor byl vypnut.\n"
-"\n"
-"Testovací vzorec TigerDave - www.tigerdave.com/ht_menu.htm"
-
-msgid "Wizard to arrange the overscan"
-msgstr "Průvodce zařídit překročení."
-
-msgid ""
-"You did not see all eight arrow heads. This means your TV has overscan "
-"enabled and presents you with a zoomed-in picture, causing you to loose part "
-"of a full HD screen. In addition this you may also miss parts of the user "
-"interface, for example volume bars and more.\n"
-"\n"
-"You can now try to resize and change the position of the user interface "
-"until you see the eight arrow heads.\n"
-"\n"
-"When done press OK.\n"
-"\n"
-msgstr ""
-"Neviděli jste všech osm hlav. Znamená to, že váš televizor je aktivován na "
-"ostrově a zobrazuje vám zvětšený obraz, což způsobuje ztrátu části obrazovky "
-"s plným HD rozlišením. Navíc můžete také vynechat části uživatelského "
-"rozhraní, například barety hlasitosti a další.\n"
-"\n"
-"Nyní se můžete pokusit změnit velikost a změnit polohu uživatelského "
-"rozhraní, dokud neuvidíte osm hlav.\n"
-"\n"
-"Po dokončení stiskněte OK.\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 msgid ""
 "\n"
@@ -1346,6 +1244,9 @@ msgstr "Kanál"
 msgid "Channel +/- button mode"
 msgstr "Režim tlačítek Kanál +/-"
 
+msgid "Channel 1 at start"
+msgstr "Kanál 1 při startu"
+
 msgid "Channel Info"
 msgstr "Info o kanálu"
 
@@ -1621,6 +1522,9 @@ msgstr ""
 "Nastavuje, kolik minut může zůstat ukončená událost viditelná v EPG. "
 "Užitečné, když potřebujete informace o události, která právě skončila nebo "
 "byla zpožděná."
+
+msgid "Configure how recording filenames are constructed."
+msgstr "Nastavuje způsob vytváření názvů souborů pro nahrávání."
 
 msgid "Configure if and how service type icons will be shown."
 msgstr "Nastavte, zda a jak budou zobrazovány ikony typu kanálu."
@@ -2003,6 +1907,9 @@ msgstr "Nelze uložit configfile %s!"
 msgid "Crash Logs"
 msgstr "Zpráva pádů"
 
+msgid "Create"
+msgstr "Vytvořit"
+
 msgid "Create DVD-ISO"
 msgstr "Vytvořit DVD-ISO"
 
@@ -2129,6 +2036,12 @@ msgstr "DvB-T2"
 msgid "DVD File Browser"
 msgstr "DVD prohlížeč souborů"
 
+msgid "DVD Player"
+msgstr "DVD přehrávač"
+
+msgid "DVD-Player Setup"
+msgstr "Nastavení DVD přehrávače"
+
 msgid "Daily"
 msgstr "Denně"
 
@@ -2246,6 +2159,9 @@ msgstr "Detekován NIMs:"
 msgid "Device Information"
 msgstr "Info o zařízení"
 
+msgid "Device Manager"
+msgstr "Správce připojených zařízení"
+
 msgid "Device mounts"
 msgstr "Připojená zařízení"
 
@@ -2275,6 +2191,9 @@ msgstr "Nastavení DiSEqC testeru"
 
 msgid "Digital contour removal"
 msgstr "Odstranění digitálních kontur"
+
+msgid "Digital downmix"
+msgstr "Digitální downmix"
 
 msgid "Direct playback of linked titles without menu"
 msgstr "Okamžité přehrávání připojených titulů bez menu"
@@ -2309,6 +2228,9 @@ msgstr "Zakázáno"
 msgid "Disk space to reserve for recordings (in GB)"
 msgstr "Rezerva volného místa pro nahrávání (v GB)"
 
+msgid "Display"
+msgstr "Displej VFD"
+
 msgid "Display 16:9 content as"
 msgstr "Zobrazit obraz 16:9 jako"
 
@@ -2332,6 +2254,9 @@ msgstr "Neměnit"
 
 msgid "Do not record"
 msgstr "Nenahrávat"
+
+msgid "Do nothing"
+msgstr "Nedělat nic"
 
 msgid ""
 "Do you really want to convert the filesystem?\n"
@@ -2569,6 +2494,9 @@ msgstr "ECM:"
 msgid "Edit"
 msgstr "Upravit"
 
+msgid "Edit DNS"
+msgstr "Upravit DNS"
+
 msgid "Edit chapters of current title"
 msgstr "Upravit kapitoly zvoleného titulu"
 
@@ -2629,6 +2557,9 @@ msgid ""
 msgstr ""
 "Povolit a nastavit čas trvání druhého informačním panelu (tlačítko OK "
 "dvakrát), který může obsahovat další informace o aktuálním provozu."
+
+msgid "Enable debug log"
+msgstr "Povolit protokol ladění"
 
 msgid "Enable freesat EPG"
 msgstr "Povolit freesat EPG"
@@ -3151,11 +3082,20 @@ msgstr "Nastavit HDD"
 msgid "Hebrew"
 msgstr "Hebrejsky"
 
+msgid "Height"
+msgstr "Výška"
+
 msgid "Hidden network"
 msgstr "Skrytá síť"
 
+msgid "Hide CI messages"
+msgstr "Skrýt CI zprávy"
+
 msgid "Hide any zap error messages."
 msgstr "Skrýt všechny chybové zprávy."
+
+msgid "Hide error messages from the Common Interface module."
+msgstr "Nezobrazovat chybová hlášení z modulu Common Interface."
 
 msgid "Hide known extensions"
 msgstr "Nezobrazovat známé přípony"
@@ -3278,6 +3218,13 @@ msgstr "Pokud nastavíte na 'ano' zobrazí se 'SRC' balíčky v prohlížeči."
 msgid "If set to 'yes' shows a small TV-screen in the EPG."
 msgstr "Pokud nastavíte na 'ano' zobrazí se náhled TV obrazovky v EPG."
 
+msgid ""
+"If set to 'yes' the EPG will alway open at the first channel. If set to 'no' "
+"the EPG will open on the present channel."
+msgstr ""
+"Pokud je nastaveno na 'ano' otevře se EPG na prvním kanálu.Pokud nastavíte "
+"na 'ne' otevře se EPG na aktuálním kanálu."
+
 msgid "If set to 'yes' the bouquets will be shown each time you open the EPG."
 msgstr ""
 "Pokud je nastaveno na 'ano' přehledy se zobrazí po každém otevření EPG."
@@ -3378,6 +3325,9 @@ msgstr "Okamžité vypnutí"
 msgid "In progress"
 msgstr "Průběh"
 
+msgid "Inactive"
+msgstr "Neaktivní"
+
 msgid "Inadyn Log"
 msgstr "Zpráva o Inadyn"
 
@@ -3458,6 +3408,9 @@ msgstr "Inotify monitorování"
 
 msgid "Input"
 msgstr "Výběr z nabídky"
+
+msgid "Input device setup"
+msgstr "Nastavení vstupního zařízení"
 
 msgid "Input devices"
 msgstr "Vstupní zařízení"
@@ -3678,6 +3631,9 @@ msgstr "Zeměpisná šířka"
 msgid "Latvian"
 msgstr "Lotyšsky"
 
+msgid "Leave DVD Player?"
+msgstr "Opustit DVD přehrávač"
+
 msgid "Leave DVD player?"
 msgstr "Zavřít DVD přehrávač?"
 
@@ -3776,6 +3732,9 @@ msgstr "Načíst EPG"
 
 msgid "Load playlist"
 msgstr "Načíst playlist"
+
+msgid "Load/Save"
+msgstr "Načti/Ulož"
 
 msgid "Local box"
 msgstr "Lokální box"
@@ -3984,14 +3943,23 @@ msgstr "Redukce bodového šumu"
 msgid "Mount"
 msgstr "Připojit"
 
+msgid "Mount Manager"
+msgstr "Nastavení připojení"
+
 msgid "Mounts Setup"
 msgstr "Nastavení připojení"
 
 msgid "Move"
 msgstr "Přesunout"
 
+msgid "Move Left/Right"
+msgstr "Přesun Vlevo/Vpravo"
+
 msgid "Move PiP to main picture"
 msgstr "Přesunout PIP do hlavního okna"
+
+msgid "Move Up/Down"
+msgstr "Přesun Nahoru/Dolů"
 
 msgid "Move down a page"
 msgstr "Přesun na konec stránky"
@@ -4244,6 +4212,15 @@ msgstr "Žádný volný index k dispozici"
 msgid "No free tuner!"
 msgstr "Žádný volný tuner!"
 
+msgid "No httpport defined in oscam.conf. This value is required!"
+msgstr "V oscam.config musíte nastavit http port! Je to Nutné!"
+
+msgid "No httppwd defined in oscam.conf"
+msgstr "Musíte nastavit http port v oscam.config"
+
+msgid "No httpuser defined in oscam.conf"
+msgstr "Musíte nastavit uživatele v oscam.config"
+
 msgid "No network connection available."
 msgstr "Žádné síťové připojení k dispozici."
 
@@ -4488,6 +4465,9 @@ msgstr "Jeden řádek"
 msgid "OnlineVersionCheck"
 msgstr "Online hledání"
 
+msgid "Only active when in standby"
+msgstr "Je aktivní pouze v pohotovostním režimu"
+
 msgid "Only extensions."
 msgstr "Pouze rozšíření"
 
@@ -4711,8 +4691,14 @@ msgstr "Pilot"
 msgid "Play"
 msgstr "Přehrát"
 
+msgid "Play Audio-CD..."
+msgstr "Přehrát Audio-CD..."
+
 msgid "Play DVD"
 msgstr "Přehrát DVD"
+
+msgid "Play Music..."
+msgstr "Přehrát muziku..."
 
 msgid "Play audio in background"
 msgstr "Přehrávat zvuk na pozadí"
@@ -5531,6 +5517,9 @@ msgstr "Pokračovat od pozice %s"
 msgid "Resuming playback"
 msgstr "Obnovit přehrávání"
 
+msgid "Return to file browser"
+msgstr "Vrátit se k hledání souborů"
+
 msgid "Return to movie list"
 msgstr "Zpět na seznam filmů"
 
@@ -6053,6 +6042,9 @@ msgstr "Pevná adresa"
 msgid "Set fps for external subtitles"
 msgstr "Změna FPS pro externí titulky"
 
+msgid "Set interface as default Interface"
+msgstr "Nastavit toto rozhraní jako standardní"
+
 msgid "Set limits"
 msgstr "Limity"
 
@@ -6265,6 +6257,12 @@ msgstr "Zobrazit CoolSingleGuide"
 
 msgid "Show CoolTVGuide"
 msgstr "Zobrazit CoolTVGuide"
+
+msgid "Show DVD-Player in Mainmenu"
+msgstr "Zobrazit DVD přehrávač v hlavním MENU satelitu"
+
+msgid "Show DVD-Player in Mainmenu when BMC is installed ?"
+msgstr "Zobrazit DVD přehrávač v hlavním menu, je-li nainstalován BMC"
 
 msgid "Show Display Icons"
 msgstr "Zobrazit ikony displeje"
@@ -6690,6 +6688,12 @@ msgstr "Seřadí seznam abecedně podle přípon"
 msgid "Sort list by"
 msgstr "Seřadit seznam podle"
 
+msgid "Sort menu screen's alphabetically"
+msgstr "Třídit menu podle abecedy"
+
+msgid "Sort plug-in browser alphabetically"
+msgstr "Třídit pluginy podle abecedy"
+
 msgid "Sort setting screen's alphabetically"
 msgstr "Třídit nastavení podle abecedy"
 
@@ -6731,6 +6735,12 @@ msgstr "Vypnutí / Restart"
 
 msgid "Standby / restart"
 msgstr "Vypnutí / Restart"
+
+msgid "Standby after current event"
+msgstr "Standby po této události"
+
+msgid "Standby in "
+msgstr "Standby za "
 
 msgid "Start"
 msgstr "Spustit"
@@ -7080,6 +7090,13 @@ msgstr ""
 "Nainstalujte ho."
 
 msgid ""
+"The Filesystem on your Timeshift-Device does not support hardlinks.\n"
+"Make sure it is formatted in EXT2 or EXT3!"
+msgstr ""
+"Souborový systém Timeshift jednotky nepodporuje hardlinky.\n"
+"Zkontrolujte, zda je ve formátu EXT2 nebo EXT3!"
+
+msgid ""
 "The IMDb plugin is not installed!\n"
 "Please install it."
 msgstr ""
@@ -7224,6 +7241,9 @@ msgstr "V současné době nejsou žádné nedokončené akce."
 msgid "There are no updates available."
 msgstr "Nejsou žádné dostupné aktualizace."
 
+msgid "There is no [webif] section in oscam.conf"
+msgstr "V oscam.conf chybí sekce [webif]"
+
 msgid "There is no signal to lock on !"
 msgstr "Není signál pro uzamčení!"
 
@@ -7313,9 +7333,15 @@ msgstr ""
 msgid "This option allows you to disable sorting of the Extensions list."
 msgstr "Tato volba umožňuje abecední třídění seznamu podle přípon"
 
+msgid "This option allows you to disable sorting of the menus"
+msgstr "Tato volba umožňuje vypnout třídění v menu"
+
 msgid ""
 "This option allows you to disable sorting of the option in setting screen's"
 msgstr "Tato volba umožňuje vypnout třídění voleb v okně nastavení obrazovky"
+
+msgid "This option allows you to disable sorting of the plugin browser."
+msgstr "Tato volba umožňuje vypnout třídění v pluginu Prohlížeč pluginů"
 
 msgid ""
 "This option allows you to the SNR as a percentage (not all receivers support "
@@ -7435,6 +7461,9 @@ msgstr "Plugin bude instalován."
 
 msgid "This plugin will be removed."
 msgstr "Plugin bude odstraněn."
+
+msgid "This receiver cannot decode %s streams!"
+msgstr "Tento přijímač nemůže dekódovat %s streamů!"
 
 msgid ""
 "This test checks for configured nameservers.\n"
@@ -7774,6 +7803,12 @@ msgstr "Slot tuneru"
 msgid "Tuner status"
 msgstr "Stav tuneru"
 
+msgid "Tuner status %s"
+msgstr "Stav tuneru %s"
+
+msgid "Tuner type"
+msgstr "Typ tuneru"
+
 msgid "Turkish"
 msgstr "Turecky"
 
@@ -7952,6 +7987,22 @@ msgstr "Použít sílu měření"
 msgid "Use slim screen"
 msgstr "Použít tnkou obrazovku"
 
+msgid ""
+"Use the Left/Right buttons on your remote to adjust the size of the user "
+"interface. Left button decreases the size, Right increases the size."
+msgstr ""
+"Pomocí levého/pravého tlačítka na dálkovém ovládání nastavte velikost "
+"uživatelského rozhraní OSD. (šipky -L/+P na DO)"
+
+msgid ""
+"Use the Left/Right buttons on your remote to move the user interface left/"
+"right"
+msgstr "Posune OSD vlevo/vptavo (šipky -L/+P)"
+
+msgid ""
+"Use the Left/Right buttons on your remote to move the user interface up/down"
+msgstr "Posuňte OSD nahoru/dolů (šipky -L/+P na DO)"
+
 msgid "Use the alternative or the conventional radio mode."
 msgstr "Použít alternativní nebo konvenční režim Rádia."
 
@@ -7985,6 +8036,9 @@ msgstr "Při timeshiftu použít panel PTS"
 
 msgid "Use trash can in movielist"
 msgstr "Používat koš v seznamu souborů"
+
+msgid "Use work-around for recordings from deep-standby"
+msgstr "Kontrola nahrávání po zapnutí z úplného vypnutí"
 
 msgid "Used service scan type"
 msgstr "Použítý typ vyhledávání programu"
@@ -8084,8 +8138,14 @@ msgstr "Rozlišení"
 msgid "View"
 msgstr "Náhled"
 
+msgid "View Movies..."
+msgstr "Zobrazit filmy..."
+
 msgid "View Rass interactive..."
 msgstr "Prohlížet Rass interaktivně..."
+
+msgid "View Video CD..."
+msgstr "Zobrazit Video CD..."
 
 msgid "View details"
 msgstr "Detaily"
@@ -8549,6 +8609,9 @@ msgstr "Který pořad chcete uložit trvale?"
 msgid "White"
 msgstr "Bílé"
 
+msgid "Width"
+msgstr "Šířka"
+
 msgid "Wireless LAN"
 msgstr "Bezdrátová LAN"
 
@@ -8764,6 +8827,13 @@ msgstr "Zdá se, že je to timeshift. Chcete ho ukončit ?"
 
 msgid "You system does not support ext4"
 msgstr "Váš systém nepodporuje ext4"
+
+msgid ""
+"Your %s %s is not connected to the internet, please check your network "
+"settings and try again."
+msgstr ""
+"Váš% %s %s není připojen k internetu, zkontrolujte prosím vaše síťové "
+"nastavení a zkuste to znovu."
 
 msgid ""
 "Your %s %s is now ready to be used.\n"
@@ -9015,6 +9085,9 @@ msgstr "dobrodružný/western/válečný"
 
 msgid "advertisement/shopping"
 msgstr "reklama/nakupování"
+
+msgid "after "
+msgstr "Za "
 
 msgid "alphabetic"
 msgstr "Srovnat podle abecedy"
@@ -9595,6 +9668,9 @@ msgstr "Jednou"
 msgid "only HD"
 msgstr "Pouze HD"
 
+msgid "open nameserver configuration"
+msgstr "Otevřít konfiguraci DNS"
+
 msgid "original"
 msgstr "Původní"
 
@@ -9999,6 +10075,9 @@ msgstr "Vertikální"
 
 msgid "view extensions..."
 msgstr "nabídka rozšíření..."
+
+msgid "wait for ci..."
+msgstr "čekat na CI..."
 
 msgid "wait for mmi..."
 msgstr "čekat na mmi..."
